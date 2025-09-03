@@ -20,7 +20,7 @@ const faqs = [
     {
       question:
         'I am interested in using iTELL for my company, how can I get in touch?',
-      answer: '<a href="mailto:lear.lab.vu@gmail.com">Contact us</a> today to arrange a free trial!',
+      answer: Contact us today to arrange a free trial!',
     },
   ],
 ]
@@ -48,8 +48,8 @@ export function Faqs() {
           >
             Frequently asked questions
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, <a href="mailto:lear.lab.vu@gmail.com">email</a> our support team
+          <p className="mt-4 text-lg tracking-tight text-slate-700"> 
+            If you can’t find what you’re looking for, email our support team
             and we will get back to you!
           </p>
         </div>
