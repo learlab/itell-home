@@ -20,7 +20,7 @@ const faqs = [
     {
       question:
         'I am interested in using iTELL for my company, how can I get in touch?',
-      answer: Contact us today to arrange a free trial!',
+      answer: Email us today to arrange a free trial!',
     },
   ],
 ]
