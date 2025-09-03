@@ -9,25 +9,25 @@ const features = [
   {
     name: 'AI Powered feedback',
     description:
-      'iTELL leverages Large Language Models to understand learning beahvior and provide personalized feedback to drive better learning outcomes.',
+      'iTELL drives better learning outcomes by leveraging Large Language Models to understand learning behavior and provide personalized feedback.',
     icon: CloudArrowUpIcon,
   },
   {
     name: 'Content Management',
     description:
-      'iTELL offers a content management system that allowes you to easily edit and update live deployments, manage media assets, etc.',
+      'iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.',
     icon: LockClosedIcon,
   },
   {
     name: 'Adaptive Scoring',
     description:
-      "iTELL provides several scoring algorithms to evaluate learner's performance through summaries and construcuted responses that are adaptive to cohot characteristics.",
+      "iTELL provides several scoring algorithms to evaluate learner performance through interleaved practice and end-of-page activities that are personalized to each user in each workplace.",
     icon: ArrowPathIcon,
   },
   {
     name: 'LMS Integration',
     description:
-      'iTELL can be easily integrated into any LTI-compatible Learning Management Systems (LMS) to such as Canvas, Blackboard, Moodle, etc.',
+      'iTELL can be easily integrated into any SCORM-compatible Learning Management Systems (LMS) such as Canvas, Blackboard, Moodle, Workday, etc.',
     icon: FingerPrintIcon,
   },
 ]
@@ -44,8 +44,8 @@ export default function PrimaryFeaturesCustom() {
             What iTELL Offers
           </p>
           <p className="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">
-            iTELL offers comphrehensive feature sets to make digital learning
-            effective, engaing and fun. It also provides easy management tools
+            iTELL offers a comphrehensive feature set to make digital learning
+            effective, engaing and fun. It also provides management tools
             and dashboards to help you monitor and optimize learning
             experiences.
           </p>
