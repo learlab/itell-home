@@ -7,8 +7,7 @@ export default function Contacts() {
             Contact Us
           </h2>
           <p className="mt-6 text-lg/8 text-gray-600 dark:text-gray-400">
-            We are happy to help you with any questions or inquiries you may
-            have.
+            Please contact us if you have any questions, or if you would like to arrange a free sample iTELL deployment!
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base/7 sm:grid-cols-2 sm:gap-y-16 lg:max-w-3xl lg:grid-cols-2">
@@ -17,7 +16,7 @@ export default function Contacts() {
               EMAIL
             </h3>
             <address className="border-l border-gray-200 pt-2 pl-6 text-gray-600 not-italic dark:border-white/10 dark:text-gray-400">
-              <p>lear.lab.vu@gmail.com</p>
+              <p><a href="mailto:lear.lab.vu@gmail.com">lear.lab.vu@gmail.com</a></p>
             </address>
           </div>
           <div>
