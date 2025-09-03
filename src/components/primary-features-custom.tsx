@@ -45,9 +45,8 @@ export default function PrimaryFeaturesCustom() {
           </p>
           <p className="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">
             iTELL offers a comphrehensive feature set to make digital learning
-            effective, engaing and fun. It also provides management tools
-            and dashboards to help you monitor and optimize learning
-            experiences.
+            effective, engaging and fun for users. For instructors and managers, it also provides tools
+            and dashboards to help you monitor and optimize learning experiences.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
