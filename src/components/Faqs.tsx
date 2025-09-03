@@ -7,20 +7,20 @@ const faqs = [
   [
     {
       question: 'How can I create my iTELL deployment?',
-      answer: 'TO REPLACE',
+      answer: 'iTELL is currently offered as a concierge product to select early adopters. <a href="mailto:lear.lab.vu@gmail.com">Contact us</a> today for a free trial!',
     },
   ],
   [
     {
-      question: 'What matrialas can iTELL handle?',
-      answer: 'TO REPLACE',
+      question: 'What materials can iTELL handle?',
+      answer: 'iTELL is content agnostic, meaning that it can convert any static text training document into an interactive learning journey, regardless of the topic! Just provide a document with text, images, and videos, and iTELL does the rest!',
     },
   ],
   [
     {
       question:
         'I am interested in using iTELL for my company, how can I get in touch?',
-      answer: 'TO REPLACE',
+      answer: '<a href="mailto:lear.lab.vu@gmail.com">Contact us</a> today to arrange a free trial!',
     },
   ],
 ]
@@ -49,8 +49,8 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            If you can’t find what you’re looking for, <a href="mailto:lear.lab.vu@gmail.com">email</a> our support team
+            and we will get back to you!
           </p>
         </div>
         <ul
