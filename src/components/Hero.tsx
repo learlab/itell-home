@@ -24,10 +24,10 @@ export function Hero() {
         <p>for all businesses.</p>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        iTELL is a framework for building a deploying digital texts, including
-        automated pipelines that leverage Large Language Models (LLMs) with
-        human oversight to generate participatory content like constructed
-        response items and summaries
+        iTELL is a computational framework that enables businesses to convert static, text-based training materials
+        into bespoke, scalable, interactive learning solutions. iTELL intelligent texts leverage AI to generate personalized
+        learning activites for users which improve engagement and learning, while providing actionable data to instructors and
+        supervisors. Click the link below to see the future of Learning & Development!
       </p>
 
       <div className="mt-2">
@@ -35,7 +35,7 @@ export function Hero() {
       </div>
       <div className="mx-auto mt-8 flex h-fit flex-col gap-4">
         <h3 className="text-xl font-semibold tracking-tight">
-          Or watch demo video below
+          Or watch the demo video below
         </h3>
         <YouTubeEmbed
           style="margin:auto"
