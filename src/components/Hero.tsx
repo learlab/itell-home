@@ -26,9 +26,9 @@ export function Hero() {
       <p className="mx-8 mt-6 w-fit text-lg tracking-tight text-slate-700 lg:mx-auto lg:max-w-3xl">
         iTELL is a computational framework that enables firms to convert
         static, text-based training materials into bespoke, scalable,
-        interactive learning solutions. iTELL intelligent texts leverage AI to
-        generate personalized learning activites for users which improve
-        engagement and learning, while providing actionable data to instructors
+        interactive learning solutions.<b />iTELL intelligent texts leverage AI to
+        generate personalized learning activites for users, improving
+        engagement and learning while providing actionable data to instructors
         and supervisors.<b />Click the link below to see the future of Learning &
         Development!
       </p>
