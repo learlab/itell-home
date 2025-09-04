@@ -25,9 +25,9 @@ export function Hero() {
       </h1>
       <p className="mx-8 mt-6 w-fit text-lg tracking-tight text-slate-700 lg:mx-auto lg:max-w-3xl">
         <span className="block">
-          iTELL is a computational framework that enables firms to convert static,
+          iTELL is a tool that allows firms to convert static,
           text-based training materials into bespoke, scalable, interactive learning solutions that 
-          improve engagement while providing actionable data insights to instructors and supervisors.
+          improve user engagement while providing actionable data insights to instructors and supervisors.
         </span>
         <span className="block mt-2">
           Click the link below to see the future of Learning & Development!
