@@ -24,13 +24,18 @@ export function Hero() {
         <p>for all businesses.</p>
       </h1>
       <p className="mx-8 mt-6 w-fit text-lg tracking-tight text-slate-700 lg:mx-auto lg:max-w-3xl">
-        iTELL is a computational framework that enables firms to convert
-        static, text-based training materials into bespoke, scalable,
-        interactive learning solutions. <br />iTELL intelligent texts leverage AI to
-        generate personalized learning activites for users, improving
-        engagement and learning while providing actionable data to instructors
-        and supervisors. <br />Click the link below to see the future of Learning &
-        Development!
+        <span className="block">
+          iTELL is a computational framework that enables firms to convert static,
+          text-based training materials into bespoke, scalable, interactive learning solutions.
+        </span>
+        <span className="block mt-2">
+          iTELL intelligent texts leverage AI to generate personalized learning activities
+          for users, improving engagement and learning while providing actionable data
+          to instructors and supervisors.
+        </span>
+        <span className="block mt-2">
+          Click the link below to see the future of Learning & Development!
+        </span>
       </p>
 
       <div className="mt-2">
