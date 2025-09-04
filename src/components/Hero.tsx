@@ -7,8 +7,8 @@ import { DemoButton } from './demo-button'
 
 export function Hero() {
   return (
-    <Container className="flex-1 pt-6 pb-16 text-center lg:pt-12">
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+    <Container className="w-full flex-1 px-4 pt-6 pb-16 text-center sm:max-w-3xl lg:max-w-7xl lg:pt-12">
+      <h1 className="mx-auto w-full font-display text-5xl font-medium tracking-tight text-slate-900 sm:max-w-xl sm:text-7xl lg:max-w-4xl">
         <span className="relative whitespace-nowrap text-primary">
           <svg
             aria-hidden="true"
@@ -23,13 +23,14 @@ export function Hero() {
         <span className="inline-block"> texts</span>
         <p>for all businesses.</p>
       </h1>
-      <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        iTELL is a computational framework that enables businesses to convert static, text-based training materials
-        into bespoke, scalable, interactive learning solutions.
-        iTELL intelligent texts leverage AI to generate personalized
-        learning activites for users which improve engagement and learning, while providing actionable data to instructors and
-        supervisors.
-        Click the link below to see the future of Learning & Development!
+      <p className="mx-8 mt-6 w-fit text-lg tracking-tight text-slate-700 lg:mx-auto lg:max-w-3xl">
+        iTELL is a computational framework that enables businesses to convert
+        static, text-based training materials into bespoke, scalable,
+        interactive learning solutions. iTELL intelligent texts leverage AI to
+        generate personalized learning activites for users which improve
+        engagement and learning, while providing actionable data to instructors
+        and supervisors. Click the link below to see the future of Learning &
+        Development!
       </p>
 
       <div className="mt-2">
@@ -40,8 +41,7 @@ export function Hero() {
           Or watch the demo video below
         </h3>
         <YouTubeEmbed
-          style="margin:auto"
-          width={850}
+          style="width:100%;margin:auto"
           videoid="hFn8i0okUk8"
           params="controls=-1"
         />

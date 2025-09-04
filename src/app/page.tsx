@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <div className="flex h-screen min-h-[1000px] flex-col bg-accent">
+        <div className="flex h-screen min-h-[1000px] flex-col">
           <Header />
           <Hero />
         </div>

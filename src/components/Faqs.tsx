@@ -7,20 +7,33 @@ const faqs = [
   [
     {
       question: 'How can I create my iTELL deployment?',
-      answer: 'iTELL is currently offered as a concierge product to select early adopters. <a href="mailto:lear.lab.vu@gmail.com">Contact us</a> today for a free trial!',
+      children: (
+        <>
+          iTELL is currently offered as a concierge product to select early
+          adopters.{' '}
+          <a
+            href="mailto:lear.lab.vu@gmail.com"
+            className="font-black underline underline-offset-4"
+          >
+            Contact us
+          </a>{' '}
+          today for a free trial!
+        </>
+      ),
     },
   ],
   [
     {
       question: 'What materials can iTELL handle?',
-      answer: 'iTELL is content agnostic, meaning that it can convert any static text training document into an interactive learning journey, regardless of the topic! Just provide a document with text, images, and videos, and iTELL does the rest!',
+      children:
+        'iTELL is content agnostic, meaning that it can convert any static text training document into an interactive learning journey, regardless of the topic! Just provide a document with text, images, and videos, and iTELL does the rest!',
     },
   ],
   [
     {
       question:
         'I am interested in using iTELL for my company, how can I get in touch?',
-      answer: Email us today to arrange a free trial!',
+      children: 'Email us today to arrange a free trial!',
     },
   ],
 ]
@@ -48,7 +61,7 @@ export function Faqs() {
           >
             Frequently asked questions
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700"> 
+          <p className="mt-4 text-lg tracking-tight text-slate-700">
             If you can’t find what you’re looking for, email our support team
             and we will get back to you!
           </p>
@@ -65,7 +78,9 @@ export function Faqs() {
                     <h3 className="font-display text-lg/7 text-slate-900">
                       {faq.question}
                     </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+                    <p className="mt-4 text-sm text-slate-700 lg:text-base">
+                      {faq.children}
+                    </p>
                   </li>
                 ))}
               </ul>
