@@ -29,7 +29,7 @@ export function Hero() {
         interactive learning solutions. iTELL intelligent texts leverage AI to
         generate personalized learning activites for users which improve
         engagement and learning, while providing actionable data to instructors
-        and supervisors. Click the link below to see the future of Learning &
+        and supervisors. <br>Click the link below to see the future of Learning &
         Development!
       </p>
 
