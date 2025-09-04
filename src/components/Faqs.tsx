@@ -33,7 +33,14 @@ const faqs = [
     {
       question:
         'I am interested in using iTELL for my company, how can I get in touch?',
-      children: 'Email us today to arrange a free trial!',
+      children: {' '}
+          <a
+            href="mailto:lear.lab.vu@gmail.com"
+            className="font-black underline underline-offset-4"
+          >
+            Contact us
+          </a>{' '}
+        today to arrange a free trial!,
     },
   ],
 ]
