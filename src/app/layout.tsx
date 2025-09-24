@@ -1,8 +1,9 @@
 import { type Metadata } from 'next'
-import { Inter, Lexend } from 'next/font/google'
+import { Roboto_Slab, Roboto } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
   title: {
@@ -13,16 +14,16 @@ export const metadata: Metadata = {
     'iTELL provides a framework for building and deploymeng AI-powered, personalized texts for all businesses. ',
 }
 
-const inter = Inter({
+const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-sans',
 })
 
-const lexend = Lexend({
+const slab = Roboto_Slab({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lexend',
+  variable: '--font-serif',
 })
 
 export default function RootLayout({
@@ -34,11 +35,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'h-full scroll-smooth bg-white antialiased',
-        inter.variable,
-        lexend.variable,
+        'h-full scroll-smooth bg-white font-sans antialiased',
+        roboto.variable,
+        slab.variable,
       )}
     >
+      <Toaster />
       <body className="flex h-full flex-col">{children}</body>
     </html>
   )

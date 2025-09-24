@@ -4,16 +4,20 @@ import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
-export function DemoButton() {
+export function DemoButton({ text = 'See a Demo' }: { text?: string }) {
   return (
     <Button
       size={'lg'}
-      variant={'outline'}
-      className="border-4 transition-all duration-200 ease-out hover:scale-105 hover:shadow-md"
+      className="h-fit border-4 transition-all duration-200 ease-out hover:scale-105 hover:shadow-md"
     >
-      <Link href={'https://demo.itell.ai'} className="inline-flex items-center">
+      <Link
+        href={'https://demo.itell.ai'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex h-fit items-center px-2 py-3 lg:text-lg xl:text-xl"
+      >
         <ArrowRight className="mr-2 size-4" />
-        See a Demo
+        {text}
       </Link>
     </Button>
   )

@@ -13,6 +13,7 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import { Button } from './ui/button'
+import { Badge } from './ui/badge'
 
 function MobileNavLink({
   href,
@@ -84,34 +85,33 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="py-4">
+    <header className="h-(--nav-height) bg-white py-4">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              <Logo className="h-10 w-auto" />
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link href="#" aria-label="Home">
+                <Logo className="h-10 w-auto" />
+              </Link>
+              <Badge variant="outline">Beta</Badge>
+            </div>
             <div className="hidden md:flex md:gap-x-6">
               <NavLink href="#features">Features</NavLink>
-              <NavLink href="#contacts">Contacts</NavLink>
-              {/*<NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>*/}
+              <NavLink href="#testimonials">Testimonials</NavLink>
+              <NavLink href="#contacts">Contact Us</NavLink>
+              <NavLink href="#faq">FAQs</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            {/*<div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
-            </div>*/}
             <Button>
-              <Link href={'https://demo.itell.ai'}>
-                <span>
-                  See a demo <span className="hidden lg:inline">today</span>
-                </span>
+              <Link
+                href={'https://demo.itell.ai'}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Watch a Demo</span>
               </Link>
             </Button>
-            {/*<div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>*/}
           </div>
         </nav>
       </Container>

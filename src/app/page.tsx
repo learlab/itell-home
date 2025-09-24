@@ -3,24 +3,23 @@ import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
-import PrimaryFeaturesCustom from '@/components/primary-features-custom'
+import LearnerFeatures from '@/components/learner-features'
+import PrimaryFeatures from '@/components/primary-features'
+import { Testimonials } from '@/components/testimonials'
 
 export default function Home() {
   return (
     <>
-      <main>
-        <div className="flex h-screen min-h-[1000px] flex-col">
-          <Header />
+      <main className="flex flex-col gap-24 bg-white">
+        <Header />
+        <div className="[&>section:nth-child(even)]:bg-slate-50 [&>section:nth-child(odd)]:bg-white">
           <Hero />
+          <PrimaryFeatures />
+          <LearnerFeatures />
+          <Testimonials />
+          <Contacts />
+          <Faqs />
         </div>
-        <PrimaryFeaturesCustom />
-        {/*<PrimaryFeatures />*/}
-        {/*<SecondaryFeatures />*/}
-        {/*<CallToAction />*/}
-        {/*<Testimonials />*/}
-        {/*<Pricing />*/}
-        <Contacts />
-        <Faqs />
       </main>
       <Footer />
     </>
