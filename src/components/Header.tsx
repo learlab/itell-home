@@ -89,13 +89,13 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="bg-white py-6 md:py-8"> {/* Bigger padding */}
+    <header className="bg-white py-6 md:py-8">
       <Container>
         <nav className="relative z-50 flex justify-between items-center">
           <div className="flex items-center md:gap-x-14">
             <div className="flex items-center gap-3">
               <Link href="#" aria-label="Home">
-                {/* Bigger logo */}
+                {/* ✅ bigger logo — controlled by parent */}
                 <Logo className="h-20 w-auto md:h-28" />
               </Link>
               <Badge
