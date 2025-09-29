@@ -95,7 +95,7 @@ export function Header() {
           <div className="flex items-center md:gap-x-14">
             <div className="relative">
               <Link href="#" aria-label="Home">
-                <Logo className="h-32 w-auto md:h-32 relative z-10" /> {/* Increased logo size */}
+                <Logo className="h-32 w-auto md:h-40 relative z-10" /> {/* Increased logo size */}
               </Link>
             </div>
             <div className="hidden md:flex md:gap-x-8 text-lg md:text-xl"> {/* Removed pt-4 */}
