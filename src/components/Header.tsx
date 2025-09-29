@@ -96,7 +96,7 @@ export function Header() {
             <div className="flex items-center gap-3">
               <Link href="#" aria-label="Home">
                 {/* Bigger logo */}
-                <Logo className="h-14 w-auto md:h-16" />
+                <Logo className="h-20 w-auto md:h-28" />
               </Link>
               <Badge
                 variant="outline"
