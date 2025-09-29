@@ -37,7 +37,7 @@ export function Hero() {
       <div className="mt-12 flex flex-col gap-8 lg:mt-18">
         <h2 className="text-lg font-semibold sm:text-2xl">Our Partners</h2>
 
-        <div className="grid grid-cols-2 items-center gap-6 lg:grid-cols-5">
+        <div className="grid grid-cols-5 items-center gap-6 lg:grid-cols-5">
           <Image
             src={'/images/vanderbilt.png'}
             alt="Vanderbilt University"
@@ -48,6 +48,27 @@ export function Hero() {
           <Image
             src={'/images/chevron.jpg'}
             alt="Vanderbilt University"
+            width={200}
+            height={200}
+          />
+
+          <Image
+            src={'/images/GTech.png'}
+            alt="Georgia Tech"
+            width={200}
+            height={200}
+          />
+
+          <Image
+            src={'/images/MGSU-logo.jfif'}
+            alt="Middle Georgia State University"
+            width={200}
+            height={200}
+          />
+
+          <Image
+            src={'/images/TCSG-logo.jfif'}
+            alt="Technical College System of Georgia"
             width={200}
             height={200}
           />
