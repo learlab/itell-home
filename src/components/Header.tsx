@@ -98,12 +98,7 @@ export function Header() {
                 {/* ✅ bigger logo — controlled by parent */}
                 <Logo className="h-20 w-auto md:h-28" />
               </Link>
-              <Badge
-                variant="outline"
-                className="text-sm md:text-base px-3 py-1"
-              >
-                Beta
-              </Badge>
+
             </div>
             <div className="hidden md:flex md:gap-x-8 text-lg md:text-xl">
               <NavLink href="#features">Features</NavLink>
