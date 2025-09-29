@@ -60,14 +60,14 @@ export function Hero() {
           />
 
           <Image
-            src={'/images/MGSU-logo.jfif'}
+            src={'/images/MGSU-logo.png'}
             alt="Middle Georgia State University"
             width={200}
             height={200}
           />
 
           <Image
-            src={'/images/TCSG-logo.jfif'}
+            src={'/images/TCSG-logo.png'}
             alt="Technical College System of Georgia"
             width={200}
             height={200}
