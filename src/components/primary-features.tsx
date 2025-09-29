@@ -79,7 +79,7 @@ export default function PrimaryFeatures() {
       </SectionHeading>
 
       <div className="mt-4 flex justify-center">
-        <DemoButton text="Watch a Demo Now" />
+        <DemoButton text="Try a Demo Now" />
       </div>
     </SectionShell>
   )
