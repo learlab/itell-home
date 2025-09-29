@@ -91,14 +91,14 @@ export function Header() {
   return (
     <header className="bg-white py-6 md:py-8">
       <Container>
-        <nav className="relative z-50 flex justify-between items-start md:items-center">
+        <nav className="relative z-50 flex justify-between items-center"> {/* Changed to items-center */}
           <div className="flex items-center md:gap-x-14">
             <div className="relative">
               <Link href="#" aria-label="Home">
-                <Logo className="h-20 w-auto md:h-28 relative z-10" />
+                <Logo className="h-24 w-auto md:h-32 relative z-10" /> {/* Increased logo size */}
               </Link>
             </div>
-            <div className="hidden md:flex md:gap-x-8 text-lg md:text-xl pt-4">
+            <div className="hidden md:flex md:gap-x-8 text-lg md:text-xl"> {/* Removed pt-4 */}
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
               <NavLink href="#contacts">Contact Us</NavLink>
