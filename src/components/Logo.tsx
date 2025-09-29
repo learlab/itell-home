@@ -6,8 +6,8 @@ export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
       <Image
         src="/images/iTELL-Beta.png" // or .svg, .jpg
         alt="Your Company Name"
-        width={200} // adjust as needed
-        height={200} // adjust as needed
+        width={400} // adjust as needed
+        height={400} // adjust as needed
         className="h-full w-auto"
       />
     </div>
