@@ -10,23 +10,23 @@ import { EditIcon, LibraryBigIcon, Link2Icon } from 'lucide-react'
 
 const features = [
   {
-    name: 'Enhanced learning',
+    name: 'Seamless Integration, Zero Disruption',
     description:
-      'iTELL drives better learning outcomes by leveraging Large Language Models to understand learning behavior and provide personalized feedback.',
+      'Your domain is our domain. Launch interactive training quickly, no migrations or extra costs required. iTELL integrates with the LMS you already use, making adoption faster, insights clearer, and your systems more valuable.',
     href: '#',
     icon: LibraryBigIcon,
   },
   {
-    name: 'CMS Support',
+    name: 'Ensure Understanding, Not Just Completion.',
     description:
-      'iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.',
+      'Gain clear visibility into comprehension and progress across your organization, so you can prove impact and close learning gaps with confidence. iTELL uses AI-powered feedback to show you exactly what learners understand and where they need support.',
     href: '#',
     icon: EditIcon,
   },
   {
-    name: 'LMS Integration',
+    name: 'Save Resources Without Sacrificing Quality',
     description:
-      'iTELL can be easily launched from an external Learning Management System (LMS) and report results back. Whether your company uses Workday, Oracle or anything else, we got you covered.',
+      'Reduces the time, effort, and specialized expertise needed to build training. With iTELL, you don’t need expensive production cycles or outside vendors to build effective training. You can turn existing documents into interactive courses quickly and scale learning across your organization.',
     href: '#',
     icon: Link2Icon,
   },
