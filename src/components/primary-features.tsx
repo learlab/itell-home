@@ -10,7 +10,7 @@ import { EditIcon, LibraryBigIcon, Link2Icon } from 'lucide-react'
 
 const features = [
   {
-    name: 'Seamless Integration, Zero Disruption',
+    name: 'Seamless Integration with Zero Disruption',
     description:
       'Your domain is our domain. Launch interactive training quickly, no migrations or extra costs required. iTELL integrates with the LMS you already use, making adoption faster, insights clearer, and your systems more valuable.',
     href: '#',
