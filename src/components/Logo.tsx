@@ -8,7 +8,7 @@ export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
       y="0px"
       width="100%"
       viewBox="0 0 1785 1980"
-      className="size-14"
+      className={props.className}
     >
       <path
         fill="#275E60"
