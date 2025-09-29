@@ -85,13 +85,13 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-    <header className="h-(--nav-height) bg-white py-4">
+    <header className="h-(--nav-height) bg-white py-8">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <div className="flex items-center gap-2">
               <Link href="#" aria-label="Home">
-                <Logo className="h-10 w-auto" />
+                <Logo className="h-14 w-auto" />
               </Link>
               <Badge variant="outline">Beta</Badge>
             </div>
