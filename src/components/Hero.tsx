@@ -10,11 +10,10 @@ export function Hero() {
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-24">
         <div className="flex flex-col gap-4">
           <h1 className="mx-auto w-full font-display text-5xl font-medium tracking-tight text-secondary sm:max-w-xl sm:text-5xl lg:max-w-4xl">
-            From PDF to Interactive Training in Minutes
+            Adaptive Learning Built from the Training Materials You Already Have
           </h1>
           <p className="sm:text-xl">
-            Make compliance training interactive, track comprehension in real
-            time, and reduce risk across your workforce.
+            Cut the complexity of creating training materials, enhance comprehension across diverse teams, and measure impact with real-time insights.
           </p>
 
           <div className="mt-6 flex justify-center lg:justify-start">
