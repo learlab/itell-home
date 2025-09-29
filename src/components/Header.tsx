@@ -91,7 +91,7 @@ export function Header() {
   return (
     <header className="bg-white py-6 md:py-8">
       <Container>
-        <nav className="relative z-50 flex justify-between items-center">
+        <nav className="relative z-50 flex justify-between items-start md:items-center">
           <div className="flex items-center md:gap-x-14">
             <div className="relative">
               <Link href="#" aria-label="Home">
