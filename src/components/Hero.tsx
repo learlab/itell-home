@@ -41,36 +41,36 @@ export function Hero() {
           <Image
             src={'/images/vanderbilt.png'}
             alt="Vanderbilt University"
-            width={140}
-            height={140}
+            width={105}
+            height={105}
           />
 
           <Image
             src={'/images/chevron.jpg'}
             alt="Vanderbilt University"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
           />
 
           <Image
             src={'/images/GTech.png'}
             alt="Georgia Tech"
-            width={140}
-            height={140}
+            width={105}
+            height={105}
           />
 
           <Image
             src={'/images/MGSU-logo.png'}
             alt="Middle Georgia State University"
-            width={140}
-            height={140}
+            width={105}
+            height={105}
           />
 
           <Image
             src={'/images/TCSG-logo.png'}
             alt="Technical College System of Georgia"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
           />
         </div>
       </div>
