@@ -39,7 +39,8 @@ export default function PrimaryFeatures() {
         <SectionTitle>Build intelligent texts faster</SectionTitle>
         <SectionHeading>What iTELL Offers</SectionHeading>
         <SectionDescription>
-          iTELL offers a comprehensive feature set to make digital learning
+          iTELL allows organizations to automatically convert static text training documents into bespoke, scalable, interactive learning journeys 
+          with a comprehensive feature set to make digital learning
           effective, engaging and fun for users. For instructors and managers,
           it also provides tools and dashboards to help you monitor and optimize
           learning experiences.
