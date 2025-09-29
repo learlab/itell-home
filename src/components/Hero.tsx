@@ -13,8 +13,7 @@ export function Hero() {
             Take Your Training Docs from Static to Interactive
           </h1>
           <p className="sm:text-xl">
-            Cut the complexity of creating training materials, enhance comprehension across diverse teams, and measure impact with real-time insights.
-            Convert static training documents into scalable, bespoke, interactive webapps with iTELL.
+            Cut the complexity of creating training materials, enhance comprehension across diverse teams, and measure impact with real-time insights with iTELL.
           </p>
 
           <div className="mt-6 flex justify-center lg:justify-start">
