@@ -55,15 +55,15 @@ export function Hero() {
           <Image
             src={'/images/GTech.png'}
             alt="Georgia Tech"
-            width={200}
-            height={200}
+            width={140}
+            height={140}
           />
 
           <Image
             src={'/images/MGSU-logo.png'}
             alt="Middle Georgia State University"
-            width={200}
-            height={200}
+            width={140}
+            height={140}
           />
 
           <Image
