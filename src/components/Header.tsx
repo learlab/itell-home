@@ -9,6 +9,7 @@ import {
 } from '@headlessui/react'
 import clsx from 'clsx'
 
+import { DemoButton } from './demo-button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
@@ -106,7 +107,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-6 md:gap-x-10">
-            <Button className="px-6 py-3 text-lg">
+            <DemoButton className="px-6 py-3 text-lg">
               <Link
                 href={'https://demo.itell.ai'}
                 target="_blank"
