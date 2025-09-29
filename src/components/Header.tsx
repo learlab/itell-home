@@ -109,7 +109,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Watch a Demo</span>
+                <span>Try a Demo</span>
               </Link>
             </Button>
           </div>
