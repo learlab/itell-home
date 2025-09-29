@@ -91,7 +91,7 @@ export function Header() {
           <div className="flex items-center md:gap-x-12">
             <div className="flex items-center gap-2">
               <Link href="#" aria-label="Home">
-                <Logo className="h-16 w-auto" />
+                <Logo className="h-16 w-auto md:h-18"" />
               </Link>
               <Badge variant="outline">Beta</Badge>
             </div>
