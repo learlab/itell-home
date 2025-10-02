@@ -115,7 +115,7 @@ export function Header() {
               >
                 <span>Try a Demo</span>
               </Link>
-            </Button>
+            </DemoButton>
             {/* Mobile nav */}
             <div className="md:hidden">
               <MobileNavigation />
