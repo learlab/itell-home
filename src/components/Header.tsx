@@ -107,7 +107,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-6 md:gap-x-10">
-            <DemoButton className="px-6 py-3 text-lg">
+            <Button className="px-6 py-3 text-lg">
               <Link
                 href={'https://demo.itell.ai'}
                 target="_blank"
@@ -115,7 +115,7 @@ export function Header() {
               >
                 <span>Try a Demo</span>
               </Link>
-            </DemoButton>
+            </Button>
             {/* Mobile nav */}
             <div className="md:hidden">
               <MobileNavigation />
