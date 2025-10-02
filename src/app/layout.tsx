@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import { Roboto_Slab, Roboto } from 'next/font/google'
 import clsx from 'clsx'
+import { GoogleAnalytics } from '@next/third-parties/google' // Your existing import
 
 import '@/styles/tailwind.css'
 import { Toaster } from 'sonner'
@@ -42,6 +43,8 @@ export default function RootLayout({
     >
       <Toaster />
       <body className="flex h-full flex-col">{children}</body>
+      {/* Add the GoogleAnalytics component here */}
+      <GoogleAnalytics gaId="G-CM4LYDKT2M" />
     </html>
   )
 }
