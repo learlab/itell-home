@@ -12,14 +12,6 @@ export default function Home() {
     <>
       <main className="flex flex-col gap-24 bg-white">
         <Header />
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CM4LYDKT2M"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-CM4LYDKT2M');
-        </script>
         <div className="[&>section:nth-child(even)]:bg-slate-50 [&>section:nth-child(odd)]:bg-white">
           <Hero />
           <PrimaryFeatures />
