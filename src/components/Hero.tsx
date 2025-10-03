@@ -26,9 +26,10 @@ export function Hero() {
             Or watch the demo video below
           </h3>*/}
           <YouTubeEmbed
-            style="height:350px;margin:auto"
             videoid="_q-d9_jjpMk"
-            params="controls=-1"
+            width="100%"
+            height="0" // Let the padding-bottom trick handle height
+            style="padding-bottom:56.25%" // This creates a 16:9 ratio (9/16 = 0.5625)
           />
         </div>
       </div>
