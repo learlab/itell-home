@@ -16,30 +16,30 @@ const testimonials = [
   [
     {
       content:
-        '“iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.”',
+        "“Using iTELL in my class was a big help to improving students' mastery of the material. The focus on rapid practice and individual feedback is exactly what we need more of in education.”",
       author: {
-        name: 'Sheryl Berge',
-        role: 'CEO at Lynch LLC',
+        name: 'David Joyner',
+        role: 'Executive Director of OMSCS & Online Education - College of Computing at Georgia Tech',
         image: avatarImage1,
       },
     },
     {
       content:
-        '“iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.”',
+        '“iTELL provides an active learning environment that is engaging, encouraging, and enjoyable and is appropriate for any adult learner. iTELL is the next best thing.”',
       author: {
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
-        image: avatarImage4,
+        name: 'Adie Shimandle',
+        role: 'Executive Director - TCDA at Technical College System of Georgia',
+        image: avatarImage2,
       },
     },
   ],
   [
     {
       content:
-        '“iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.”',
+        '“iTELL provides an active learning environment that is engaging, encouraging, and enjoyable and is appropriate for any adult learner. iTELL is the next best thing”',
       author: {
-        name: 'Leland Kiehn',
-        role: 'Founder of Kiehn and Sons',
+        name: 'Adie Shimandle',
+        role: 'Executive Director - TCDA at Technical College System of Georgia',
         image: avatarImage5,
       },
     },
@@ -49,7 +49,7 @@ const testimonials = [
       author: {
         name: 'Erin Powlowski',
         role: 'COO at Armstrong Inc',
-        image: avatarImage2,
+        image: avatarImage4,
       },
     },
   ],
