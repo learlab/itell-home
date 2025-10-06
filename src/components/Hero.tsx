@@ -29,7 +29,7 @@ export function Hero() {
             videoid="_q-d9_jjpMk"
             width={640}
             height={360} // Let the padding-bottom trick handle height
-            style={{ width: '100%', aspectRatio: '16/9' }} // This creates a 16:9 ratio (9/16 = 0.5625)
+            style="width:100%;aspect-ratio:16/9;" // This creates a 16:9 ratio (9/16 = 0.5625)
           />
         </div>
       </div>
