@@ -10,7 +10,7 @@ import { Testimonials } from '@/components/testimonials'
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col gap-24 bg-white">
+      <main className="flex flex-col gap-12 bg-white">
         <Header />
         <div className="[&>section:nth-child(even)]:bg-slate-50 [&>section:nth-child(odd)]:bg-white">
           <Hero />

@@ -39,8 +39,9 @@ export default function PrimaryFeatures() {
         <SectionTitle>Build intelligent texts faster</SectionTitle>
         <SectionHeading>What iTELL Offers</SectionHeading>
         <SectionDescription>
-          iTELL allows organizations to automatically convert static text training documents into bespoke, scalable, interactive learning journeys 
-          with a comprehensive feature set to make digital learning
+          iTELL allows organizations to automatically convert static text
+          training documents into bespoke, scalable, interactive learning
+          journeys with a comprehensive feature set to make digital learning
           effective, engaging and fun for users. For instructors and managers,
           it also provides tools and dashboards to help you monitor and optimize
           learning experiences.
@@ -50,7 +51,7 @@ export default function PrimaryFeatures() {
         <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
           {features.map((feature) => (
             <div key={feature.name} className="flex flex-col">
-              <dt className="flex items-center gap-x-3 text-lg font-semibold text-gray-900 lg:text-xl">
+              <dt className="flex items-center gap-x-3 text-lg font-semibold text-pretty text-gray-900 lg:text-xl">
                 <feature.icon
                   aria-hidden="true"
                   className="size-5 flex-none stroke-primary"

@@ -32,7 +32,7 @@ export default function Contacts() {
   return (
     <SectionShell className="relative isolate" id="contacts">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:px-8 lg:py-48">
+        <div className="relative px-6 pt-6 pb-20 lg:static lg:px-8 lg:py-12">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden lg:w-1/2">
               <svg
@@ -96,7 +96,9 @@ export default function Contacts() {
                 adaptive, interactive learning experiences.
               </p>
               <p>
-                Experience the full power of iTELL risk-free and sign up for a
+                You’ll have full access to the platform, real-time metrics, and
+                onboarding support to make sure you get real results with your
+                team.
               </p>
               <p className="font-semibold">
                 See if iTELL is right for your organization without the
@@ -106,7 +108,7 @@ export default function Contacts() {
           </div>
         </div>
         <form
-          className="px-6 pt-20 pb-24 sm:pb-32 lg:px-8 lg:py-48"
+          className="px-6 pt-6 pb-24 sm:pb-32 lg:px-8 lg:py-12"
           onSubmit={onSubmit}
         >
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
