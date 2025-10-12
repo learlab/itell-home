@@ -1,18 +1,10 @@
 import Image from 'next/image'
-
+import { ContactButton } from './contact-button'
 import { YouTubeEmbed } from '@next/third-parties/google'
 import { DemoButton } from './demo-button'
 import { SectionShell } from './section-shell'
 
 export function Hero() {
-  const handleContactClick = () => {
-    // Scroll to contacts section
-    const contactsSection = document.getElementById('contacts');
-    if (contactsSection) {
-      contactsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <SectionShell className="pt-4 pb-12 sm:pt-8 sm:pb-20">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-24">
@@ -26,12 +18,7 @@ export function Hero() {
 
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:gap-6 justify-center lg:justify-start">
             <DemoButton />
-            <button
-              onClick={handleContactClick}
-              className="px-6 py-3 border border-secondary text-secondary font-medium rounded-md hover:bg-secondary hover:text-white transition-colors duration-200"
-            >
-              Contact Us for a Free Demo
-            </button>
+            <ContactButton />
           </div>
         </div>
 

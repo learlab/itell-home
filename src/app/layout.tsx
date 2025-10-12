@@ -16,12 +16,14 @@ export const metadata: Metadata = {
 }
 
 const roboto = Roboto({
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-sans',
 })
 
 const slab = Roboto_Slab({
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-serif',
