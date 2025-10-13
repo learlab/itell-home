@@ -9,13 +9,13 @@ import { createContactSubmission } from '@/actions/contact_submissions'
 
 export default function Contacts() {
   const [pending, startTransition] = useTransition()
+  
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault()
-
     const formData = new FormData(e.currentTarget as HTMLFormElement)
 
     startTransition(async () => {
-      await createContactSubmission({
+      const result = await createContactSubmission({
         firstName: String(formData.get('first_name')),
         lastName: String(formData.get('last_name')) || undefined,
         email: String(formData.get('org_email')),
@@ -23,9 +23,13 @@ export default function Contacts() {
         message: String(formData.get('message')),
       })
 
-      toast.success(
-        'Thank you for your interests in iTELL, we will get back to you shortly.',
-      )
+      if (result.success) {
+        toast.success('Thank you for your interest in iTELL. We will get back to you shortly.')
+        // Optional: Reset the form
+        ;(e.target as HTMLFormElement).reset()
+      } else {
+        toast.error('Failed to send message. Please try again or contact us directly.')
+      }
     })
   }
 
