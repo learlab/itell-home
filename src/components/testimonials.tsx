@@ -2,9 +2,8 @@ import Image from 'next/image'
 
 import avatarImage1 from '@/images/avatars/david_joiner_pic.png'
 import avatarImage2 from '@/images/avatars/adie_schimandle_pic.png'
-import avatarImage3 from '@/images/avatars/avatar-3.png'
-import avatarImage4 from '@/images/avatars/avatar-4.png'
-import avatarImage5 from '@/images/avatars/avatar-5.png'
+import avatarImage3 from '@/images/avatars/scott_hinze_pic.jpeg'
+
 import {
   SectionHeader,
   SectionHeading,
@@ -12,67 +11,35 @@ import {
   SectionTitle,
 } from './section-shell'
 
+
 const testimonials = [
-  [
-    {
-      content:
-        "“Using iTELL in my class was a big help to improving students' mastery of the material. The focus on rapid practice and individual feedback is exactly what we need more of in education.”",
-      author: {
-        name: 'David Joyner',
-        role: 'Executive Director of OMSCS & Online Education - College of Computing at Georgia Tech',
-        image: avatarImage1,
-      },
+  {
+    content:
+      "“Using iTELL in my class was a big help to improving students' mastery of the material. The focus on rapid practice and individual feedback is exactly what we need more of in education.”",
+    author: {
+      name: 'David Joyner',
+      role: 'Executive Director of OMSCS & Online Education - College of Computing at Georgia Tech',
+      image: avatarImage1,
     },
-    {
-      content:
-        '“iTELL provides an active learning environment that is engaging, encouraging, and enjoyable and is appropriate for any adult learner. iTELL is the next best thing.”',
-      author: {
-        name: 'Adie Shimandle',
-        role: 'Executive Director - TCDA at Technical College System of Georgia',
-        image: avatarImage2,
-      },
+  },
+  {
+    content:
+      '“iTELL provides an active learning environment that is engaging, encouraging, and enjoyable and is appropriate for any adult learner. iTELL is the next best thing.”',
+    author: {
+      name: 'Adie Shimandle',
+      role: 'Executive Director - TCDA at Technical College System of Georgia',
+      image: avatarImage2,
     },
-  ],
-  [
-    {
-      content:
-        '“iTELL provides an active learning environment that is engaging, encouraging, and enjoyable and is appropriate for any adult learner. iTELL is the next best thing”',
-      author: {
-        name: 'Adie Shimandle',
-        role: 'Executive Director - TCDA at Technical College System of Georgia',
-        image: avatarImage5,
-      },
+  },
+  {
+    content:
+      '“I’ve been using iTell in my research methods course and have been very impressed. I especially value that iTell gives me more than just scores—it provides rich written responses I can use for my own evaluations.”',
+    author: {
+      name: 'Scott Hinze',
+      role: 'Associate Professor - Middle Georgia State University',
+      image: avatarImage3,
     },
-    {
-      content:
-        '“iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.”',
-      author: {
-        name: 'Erin Powlowski',
-        role: 'COO at Armstrong Inc',
-        image: avatarImage4,
-      },
-    },
-  ],
-  [
-    {
-      content:
-        '“iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.”',
-      author: {
-        name: 'Peter Renolds',
-        role: 'Founder of West Inc',
-        image: avatarImage3,
-      },
-    },
-    {
-      content:
-        '“iTELL offers a content management system that allows you to easily edit and update live deployments, manage media assets, etc.”',
-      author: {
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
-        image: avatarImage4,
-      },
-    },
-  ],
+  },
 ]
 
 function QuoteIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -94,41 +61,35 @@ export function Testimonials() {
         role="list"
         className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
       >
-        {testimonials.map((column, columnIndex) => (
-          <li key={columnIndex}>
-            <ul role="list" className="flex flex-col gap-y-6 sm:gap-y-8">
-              {column.map((testimonial, testimonialIndex) => (
-                <li key={testimonialIndex}>
-                  <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
-                    <QuoteIcon className="absolute top-6 left-6 fill-slate-100" />
-                    <blockquote className="relative">
-                      <p className="text-lg tracking-tight text-slate-900">
-                        {testimonial.content}
-                      </p>
-                    </blockquote>
-                    <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
-                      <div>
-                        <div className="font-display text-base text-slate-900">
-                          {testimonial.author.name}
-                        </div>
-                        <div className="mt-1 text-sm text-slate-500">
-                          {testimonial.author.role}
-                        </div>
-                      </div>
-                      <div className="overflow-hidden rounded-full bg-slate-50">
-                        <Image
-                          className="h-14 w-14 object-cover"
-                          src={testimonial.author.image}
-                          alt=""
-                          width={56}
-                          height={56}
-                        />
-                      </div>
-                    </figcaption>
-                  </figure>
-                </li>
-              ))}
-            </ul>
+        {testimonials.map((testimonial, index) => (
+          <li key={index}>
+            <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+              <QuoteIcon className="absolute top-6 left-6 fill-slate-100" />
+              <blockquote className="relative">
+                <p className="text-lg tracking-tight text-slate-900">
+                  {testimonial.content}
+                </p>
+              </blockquote>
+              <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                <div>
+                  <div className="font-display text-base text-slate-900">
+                    {testimonial.author.name}
+                  </div>
+                  <div className="mt-1 text-sm text-slate-500">
+                    {testimonial.author.role}
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-full bg-slate-50">
+                  <Image
+                    className="h-14 w-14 object-cover"
+                    src={testimonial.author.image}
+                    alt=""
+                    width={56}
+                    height={56}
+                  />
+                </div>
+              </figcaption>
+            </figure>
           </li>
         ))}
       </ul>
