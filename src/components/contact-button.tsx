@@ -3,7 +3,7 @@
 import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 
-export function ContactButton({ text = 'Arrange a Free Pilot' }: { text?: string }) {
+export function ContactButton({ text = 'Book a Demo' }: { text?: string }) {
   const handleContactClick = () => {
     const contactsSection = document.getElementById('contacts');
     if (contactsSection) {
