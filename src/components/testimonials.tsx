@@ -3,7 +3,7 @@ import Image from 'next/image'
 import avatarImage1 from '@/images/avatars/david_joiner_pic.png'
 import avatarImage2 from '@/images/avatars/adie_schimandle_pic.png'
 import avatarImage3 from '@/images/avatars/scott_hinze_pic.jpeg'
-// Remove unused avatar imports
+
 import {
   SectionHeader,
   SectionHeading,
@@ -11,7 +11,7 @@ import {
   SectionTitle,
 } from './section-shell'
 
-// Keep only the first three testimonials in a flat array
+
 const testimonials = [
   {
     content:
