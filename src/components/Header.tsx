@@ -113,7 +113,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Try a Demo</span>
+                <span>Try iTELL</span>
               </Link>
             </Button>
             {/* Mobile nav */}
