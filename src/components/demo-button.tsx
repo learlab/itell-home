@@ -4,7 +4,7 @@ import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
-export function DemoButton({ text = 'Try a Demo' }: { text?: string }) {
+export function DemoButton({ text = 'Try iTELL' }: { text?: string }) {
   return (
     <Button
       size={'lg'}
