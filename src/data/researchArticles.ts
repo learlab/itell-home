@@ -83,4 +83,4 @@ export const researchArticles = [
     citation: 'Coscia, A., Holmes, L., Morris, W., Choi, J., Crossley, S., Endert, A. (2024) iScore: Visual Analytics for Interpreting How Language Models Automatically Score Summaries. ',
     externalUrl: 'https://dl.acm.org/doi/10.1145/3640543.3645142',
   },
-] as const;
+]

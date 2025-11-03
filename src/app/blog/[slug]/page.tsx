@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { blogPosts } from '@/data/blogPosts';
+import Image from 'next/image';
 
 interface BlogPostProps {
   params: Promise<{ slug: string }>
@@ -79,10 +80,12 @@ export default async function BlogPost({ params }: BlogPostProps) {
           {/* Article Image */}
           <div className="mb-8 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-slate-100 flex justify-center items-center py-8">
             <div className="relative w-full max-w-3xl h-80">
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
-                className="w-full h-full object-scale-down"
+                fill // This makes the image fill the parent container
+                className="object-scale-down"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw" // Helps the browser choose the right image size
               />
             </div>
           </div>

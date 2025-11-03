@@ -45,4 +45,4 @@ export const blogPosts = [
     category: 'Training',
     readTime: '4 min read',
   },
-] as const;
+]
