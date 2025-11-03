@@ -1,3 +1,5 @@
+'use client'; 
+
 import { DemoButton } from './demo-button'
 import {
   SectionDescription,
@@ -12,14 +14,11 @@ import {
   CircleQuestionMark,
   EditIcon,
   FilePenLineIcon,
-  FileText,
   FileTextIcon,
   GaugeIcon,
-  GaugeCircleIcon,
-  LibraryBigIcon,
-  Link2Icon,
   MessageCircleIcon,
 } from 'lucide-react'
+import { useEffect, useRef } from 'react'
 
 const features = [
   {
@@ -34,12 +33,10 @@ const features = [
     name: 'Short Constructed Response',
     icon: CircleQuestionMark,
   },
-
   {
     name: 'Structured Dialogues for Reading Support',
     icon: MessageCircleIcon,
   },
-
   {
     name: 'Summary Activity',
     icon: FileTextIcon,
@@ -52,7 +49,6 @@ const features = [
     name: 'Highlighting and Notetaking',
     icon: FilePenLineIcon,
   },
-
   {
     name: 'Learner Dashboard',
     icon: GaugeIcon,
@@ -60,30 +56,66 @@ const features = [
 ]
 
 export default function LearnerFeatures() {
+  const swiperElRef = useRef(null);
+
+  useEffect(() => {
+    // Import and register Swiper on client side only
+    import('swiper/element/bundle').then(({ register }) => {
+      register();
+    });
+  }, []);
+
   return (
     <SectionShell id="learner-features">
       <SectionHeader>
         <SectionTitle>For your learners</SectionTitle>
         <SectionHeading>Features that Keep Learners Engaged</SectionHeading>
         <SectionDescription>
-          Boost comprehension and retention for every employee through iTELL’s
+          Boost comprehension and retention for every employee through iTELL's
           proven reading strategies and AI support.
         </SectionDescription>
       </SectionHeader>
-      <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-        <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
+      <div className="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mt-24">
+        <swiper-container
+          ref={swiperElRef}
+          slides-per-view="1"
+          space-between="30"
+          pagination="true"
+          navigation="true"
+          autoplay-delay="4000"
+          breakpoints={JSON.stringify({
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          })}
+          style={{
+            '--swiper-navigation-color': '#000',
+            '--swiper-pagination-color': '#000',
+          } as React.CSSProperties}
+        >
           {features.map((feature) => (
-            <div key={feature.name} className="flex flex-col">
-              <dt className="flex flex-col items-center gap-3 text-lg font-semibold text-gray-900 lg:text-xl">
+            <swiper-slide key={feature.name}>
+              <div className="flex h-full flex-col items-center rounded-lg bg-white p-6 text-center shadow-sm transition-all hover:shadow-md">
                 <feature.icon
                   aria-hidden="true"
                   className="size-24 flex-none stroke-primary"
                 />
-                <p className="text-center">{feature.name}</p>
-              </dt>
-            </div>
+                <h3 className="mt-4 text-lg font-semibold text-gray-900 lg:text-xl">
+                  {feature.name}
+                </h3>
+              </div>
+            </swiper-slide>
           ))}
-        </dl>
+        </swiper-container>
       </div>
     </SectionShell>
   )

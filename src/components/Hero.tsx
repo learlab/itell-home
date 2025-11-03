@@ -29,8 +29,9 @@ export function Hero() {
           <YouTubeEmbed
             videoid="nQjNPJmorNE"
             width={640}
-            height={360} // Let the padding-bottom trick handle height
-            style="width:100%;aspect-ratio:16/9;" // This creates a 16:9 ratio (9/16 = 0.5625)
+            height={360}
+            style="width:100%;aspect-ratio:16/9;"
+            params="playsinline=1"
           />
         </div>
       </div>
@@ -70,8 +71,8 @@ export function Hero() {
           <Image
             src={'/images/TCSG-logo.png'}
             alt="Technical College System of Georgia"
-            width={150}
-            height={150}
+            width={200}
+            height={200}
           />
         </div>
       </div>
