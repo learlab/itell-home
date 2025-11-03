@@ -48,7 +48,7 @@ const features = [
     icon: FileTextIcon,
   },
   {
-    name: 'Cloze Test Activity',
+    name: 'Fill-in-the-Blanks Test Activity',
     icon: BookOpenIcon,
   },
   {
