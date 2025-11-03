@@ -71,7 +71,7 @@ export default function LearnerFeatures() {
         <SectionTitle>For your learners</SectionTitle>
         <SectionHeading>Features that Keep Learners Engaged</SectionHeading>
         <SectionDescription>
-          Boost comprehension and retention for every employee through iTELL's
+          Boost comprehension and retention for every employee through iTELL&apos;s
           proven reading strategies and AI support.
         </SectionDescription>
       </SectionHeader>
