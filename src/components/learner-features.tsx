@@ -1,5 +1,11 @@
 'use client'; 
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import { DemoButton } from './demo-button'
 import {
   SectionDescription,
@@ -56,15 +62,6 @@ const features = [
 ]
 
 export default function LearnerFeatures() {
-  const swiperElRef = useRef(null);
-
-  useEffect(() => {
-    // Import and register Swiper on client side only
-    import('swiper/element/bundle').then(({ register }) => {
-      register();
-    });
-  }, []);
-
   return (
     <SectionShell id="learner-features">
       <SectionHeader>
@@ -76,34 +73,21 @@ export default function LearnerFeatures() {
         </SectionDescription>
       </SectionHeader>
       <div className="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mt-24">
-        <swiper-container
-          ref={swiperElRef}
-          slides-per-view="1"
-          space-between="30"
-          pagination="true"
-          navigation="true"
-          autoplay-delay="4000"
-          breakpoints={JSON.stringify({
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            1280: {
-              slidesPerView: 4,
-              spaceBetween: 30,
-            },
-          })}
-          style={{
-            '--swiper-navigation-color': '#000',
-            '--swiper-pagination-color': '#000',
-          } as React.CSSProperties}
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+            1280: { slidesPerView: 4, spaceBetween: 30 },
+          }}
         >
           {features.map((feature) => (
-            <swiper-slide key={feature.name}>
+            <SwiperSlide key={feature.name}>
               <div className="flex h-full flex-col items-center rounded-lg bg-white p-6 text-center shadow-sm transition-all hover:shadow-md">
                 <feature.icon
                   aria-hidden="true"
@@ -113,10 +97,10 @@ export default function LearnerFeatures() {
                   {feature.name}
                 </h3>
               </div>
-            </swiper-slide>
+            </SwiperSlide>
           ))}
-        </swiper-container>
+        </Swiper>
       </div>
     </SectionShell>
-  )
+  );
 }
