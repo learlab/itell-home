@@ -27,7 +27,7 @@ const blogPosts = [
     `,
     date: '2025-11-03',
     slug: 'future-of-ai-in-education',
-    image: '/blog/employee-training.webp',
+    image: '/blog/itell-logo.png',
     category: 'Technology',
     readTime: '5 min read',
   },
