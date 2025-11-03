@@ -3,35 +3,12 @@ import { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer' // Make sure you have a Footer component
 import BlogCarousel from '@/components/BlogCarousel'
+import { blogPosts } from '@/data/blogPosts';
 
 export const metadata: Metadata = {
   title: 'Blog - iTELL',
   description: 'Read the latest insights and updates from iTELL',
 }
-
-// Mock blog posts data - replace with your actual data source
-const blogPosts = [
-  {
-    id: 1,
-    title: 'The Future of AI in Education',
-    excerpt: 'Exploring how artificial intelligence is transforming learning experiences and making education more accessible.',
-    date: '2025-11-03',
-    slug: 'future-of-ai-in-education',
-    image: '/blog/itell-logo.png',
-    category: 'Technology',
-    readTime: '11 min read',
-  },
-  {
-    id: 2,
-    title: 'Best Practices for Employee Training',
-    excerpt: 'Learn how to create effective training programs that stick and drive real business results.',
-    date: '2024-11-03',
-    slug: 'best-practices-employee-training',
-    image: '/blog/employee-training.webp',
-    category: 'Training',
-    readTime: '4 min read',
-  },
-]
 
 export default function BlogPage() {
   return (
