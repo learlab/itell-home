@@ -28,8 +28,6 @@ export function Hero() {
           </h3>*/}
           <YouTubeEmbed
             videoid="nQjNPJmorNE"
-            width={640}
-            height={360}
             style="width:100%;aspect-ratio:16/9;"
             params="playsinline=1"
           />
