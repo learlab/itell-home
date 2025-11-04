@@ -114,11 +114,11 @@ export function Header() {
           <div className="flex items-center gap-x-6 md:gap-x-10">
             <Button className="px-6 py-3 text-lg">
               <Link
-                href={'https://demo.itell.ai'}
+                href={'"/#contacts"'}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>Try iTELL</span>
+                <span>Contact Us</span>
               </Link>
             </Button>
             {/* Mobile nav */}
