@@ -1,7 +1,6 @@
-// src/components/learner-features.tsx
+// Enhanced version with auto-play and responsive settings
 'use client'
 
-import { useRef, useState, useEffect } from 'react'
 import { DemoButton } from './demo-button'
 import {
   SectionDescription,
@@ -20,6 +19,8 @@ import {
   GaugeIcon,
   MessageCircleIcon,
 } from 'lucide-react'
+import useEmblaCarousel from 'embla-carousel-react'
+import { useCallback, useEffect, useState } from 'react'
 
 const features = [
   {
@@ -57,40 +58,63 @@ const features = [
 ]
 
 export default function LearnerFeatures() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    align: 'start',
+    containScroll: 'trimSnaps',
+    dragFree: false,
+    loop: false,
+    skipSnaps: false,
+    breakpoints: {
+      '(min-width: 768px)': { align: 'center' },
+      '(min-width: 1024px)': { align: 'start' },
+    },
+  })
+  
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [canScrollNext, setCanScrollNext] = useState(false)
 
-  const cardWidth = 256 // w-64 = 256px
-  const gap = 24 // gap-6 = 24px
-  const cardTotalWidth = cardWidth + gap
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
+  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi])
 
-  const scrollToIndex = (index: number) => {
-    if (containerRef.current && !isTransitioning) {
-      setIsTransitioning(true)
-      setCurrentIndex(index)
-      
-      // Transition ends after CSS animation completes
-      setTimeout(() => {
-        setIsTransitioning(false)
-      }, 500)
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+    setCanScrollPrev(emblaApi.canScrollPrev())
+    setCanScrollNext(emblaApi.canScrollNext())
+  }, [emblaApi])
+
+  // Auto-play functionality (optional)
+  useEffect(() => {
+    if (!emblaApi) return
+
+    const autoScroll = setInterval(() => {
+      if (emblaApi.canScrollNext()) {
+        emblaApi.scrollNext()
+      } else {
+        emblaApi.scrollTo(0) // Restart from beginning
+      }
+    }, 4000) // Change every 4 seconds
+
+    return () => clearInterval(autoScroll)
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onSelect()
+    setScrollSnaps(emblaApi.scrollSnapList())
+    
+    emblaApi.on('select', onSelect)
+    emblaApi.on('reInit', onSelect)
+
+    return () => {
+      emblaApi.off('select', onSelect)
+      emblaApi.off('reInit', onSelect)
     }
-  }
-
-  const scrollLeft = () => {
-    const newIndex = Math.max(0, currentIndex - 1)
-    scrollToIndex(newIndex)
-  }
-
-  const scrollRight = () => {
-    const newIndex = Math.min(features.length - 1, currentIndex + 1)
-    scrollToIndex(newIndex)
-  }
-
-  // Calculate transform based on current index
-  const getTransform = () => {
-    return `translateX(-${currentIndex * cardTotalWidth}px)`
-  }
+  }, [emblaApi, onSelect])
 
   return (
     <SectionShell id="learner-features">
@@ -107,20 +131,20 @@ export default function LearnerFeatures() {
         {/* Navigation Buttons */}
         <div className="flex justify-end gap-2 mb-6">
           <button
-            onClick={scrollLeft}
-            disabled={currentIndex === 0 || isTransitioning}
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
             className="p-3 rounded-full border border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
-            aria-label="Scroll left"
+            aria-label="Previous slide"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button
-            onClick={scrollRight}
-            disabled={currentIndex === features.length - 1 || isTransitioning}
+            onClick={scrollNext}
+            disabled={!canScrollNext}
             className="p-3 rounded-full border border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
-            aria-label="Scroll right"
+            aria-label="Next slide"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -128,20 +152,13 @@ export default function LearnerFeatures() {
           </button>
         </div>
 
-        {/* Carousel Container with overflow hidden */}
-        <div className="overflow-hidden py-8 px-4 min-h-[320px]">
-          <div
-            ref={containerRef}
-            className="flex gap-6 transition-transform duration-500 ease-out" // Smooth transform animation
-            style={{ 
-              transform: getTransform(),
-              width: `${features.length * cardTotalWidth}px` // Total width of all cards
-            }}
-          >
+        {/* Embla Carousel Container */}
+        <div className="overflow-hidden py-8 px-4 min-h-[320px]" ref={emblaRef}>
+          <div className="flex touch-pan-y gap-6"> {/* Added touch-pan-y for better mobile */}
             {features.map((feature) => (
               <div
                 key={feature.name}
-                className="flex-shrink-0 w-64" // Remove scroll-snap since we're using transforms
+                className="flex-shrink-0 w-64 min-w-0 flex-[0_0_16rem] md:flex-[0_0_18rem] lg:flex-[0_0_16rem]" // Responsive flex basis
               >
                 <div className="flex flex-col items-center rounded-lg bg-white p-8 text-center shadow-sm transition-all duration-300 hover:shadow-lg h-full min-h-[280px] justify-center hover:scale-105">
                   <feature.icon
@@ -159,17 +176,16 @@ export default function LearnerFeatures() {
 
         {/* Dots Indicator */}
         <div className="flex justify-center gap-2 mt-6">
-          {features.map((_, index) => (
+          {scrollSnaps.map((_, index) => (
             <button
               key={index}
-              onClick={() => scrollToIndex(index)}
+              onClick={() => scrollTo(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
+                index === selectedIndex 
                   ? 'bg-blue-600 scale-125' 
                   : 'bg-gray-300 hover:bg-gray-400'
-              } ${isTransitioning ? 'pointer-events-none' : ''}`}
+              }`}
               aria-label={`Go to slide ${index + 1}`}
-              disabled={isTransitioning}
             />
           ))}
         </div>
