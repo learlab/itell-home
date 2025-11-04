@@ -83,8 +83,21 @@ function MobileNavigation() {
         <MobileNavLink href="/#testimonials">Testimonials</MobileNavLink>
         <MobileNavLink href="/#contacts">Contact Us</MobileNavLink>
         <MobileNavLink href="/#faq">FAQs</MobileNavLink>
-        <MobileNavLink href="/blog">Blog</MobileNavLink>
-        <MobileNavLink href="/research">Research</MobileNavLink>
+        <hr className="m-3 border-slate-300/40" />
+        <PopoverButton
+          as={Link}
+          href="/blog"
+          className="block w-full p-3 text-lg md:text-xl font-semibold text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+        >
+          Blog
+        </PopoverButton>
+        <PopoverButton
+          as={Link}
+          href="/research"
+          className="block w-full p-3 text-lg md:text-xl font-semibold text-green-600 bg-green-50 rounded-lg hover:bg-green-100 transition-colors mt-2"
+        >
+          Research
+        </PopoverButton>
         <hr className="m-3 border-slate-300/40" />
       </PopoverPanel>
     </Popover>
