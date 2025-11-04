@@ -1,6 +1,7 @@
 // src/components/Header.tsx
 'use client'
 
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import {
   Popover,
@@ -78,37 +79,99 @@ function MobileNavigation() {
         transition
         className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-6 text-xl tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-closed:scale-95 data-closed:opacity-0 data-enter:duration-150 data-enter:ease-out data-leave:duration-100 data-leave:ease-in"
       >
-        <MobileNavLink href="/#features">Features</MobileNavLink> {/* Fixed */}
-        <MobileNavLink href="/#testimonials">Testimonials</MobileNavLink> {/* Fixed */}
-        <MobileNavLink href="/#contacts">Contact Us</MobileNavLink> {/* Fixed */}
+        <MobileNavLink href="/#features">Features</MobileNavLink>
+        <MobileNavLink href="/#testimonials">Testimonials</MobileNavLink>
+        <MobileNavLink href="/#contacts">Contact Us</MobileNavLink>
+        <MobileNavLink href="/#faq">FAQs</MobileNavLink>
         <MobileNavLink href="/blog">Blog</MobileNavLink>
         <MobileNavLink href="/research">Research</MobileNavLink>
-        <MobileNavLink href="/#faq">FAQs</MobileNavLink> {/* Fixed */}
         <hr className="m-3 border-slate-300/40" />
-        <MobileNavLink href="/login">Sign in</MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
 }
 
 export function Header() {
+  const [isVisible, setIsVisible] = useState(true)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      // Show shadow when scrolled
+      setIsScrolled(currentScrollY > 10)
+      
+      // Hide header when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down - hide header
+        setIsVisible(false)
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scrolling up - show header
+        setIsVisible(true)
+      }
+      
+      lastScrollY.current = currentScrollY
+    }
+
+    // Throttle scroll events for better performance
+    let ticking = false
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', throttledScroll, { passive: true })
+    return () => window.removeEventListener('scroll', throttledScroll)
+  }, [])
+
   return (
-    <header className="bg-white py-2 md:py-3 sticky top-0 z-50 shadow-sm">
+    <header className={clsx(
+      "bg-white py-2 md:py-3 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 shadow-sm",
+      isScrolled && "shadow-lg bg-white/95 backdrop-blur-sm",
+      !isVisible && "-translate-y-full" // This hides the header by moving it up
+    )}>
       <Container>
         <nav className="relative z-50 flex justify-between items-center">
           <div className="flex items-center md:gap-x-14">
             <div className="relative">
-              <Link href="/" aria-label="Home"> {/* Already fixed to / */}
+              <Link href="/" aria-label="Home">
                 <Logo className="h-32 w-auto md:h-40 relative z-10" />
               </Link>
             </div>
             <div className="hidden md:flex md:gap-x-8 text-lg md:text-xl">
-              <NavLink href="/#features">Features</NavLink> {/* Fixed */}
-              <NavLink href="/#testimonials">Testimonials</NavLink> {/* Fixed */}
-              <NavLink href="/#contacts">Contact Us</NavLink> {/* Fixed */}
-              <NavLink href="/blog">Blog</NavLink>
-              <NavLink href="/research">Research</NavLink>
-              <NavLink href="/#faq">FAQs</NavLink> {/* Fixed */}
+              {/* In-page sections - normal styling */}
+              <div className="flex gap-x-8">
+                <NavLink href="/#features">Features</NavLink>
+                <NavLink href="/#testimonials">Testimonials</NavLink>
+                <NavLink href="/#contacts">Contact Us</NavLink>
+                <NavLink href="/#faq">FAQs</NavLink>
+              </div>
+              
+              {/* Vertical separator */}
+              <div className="h-6 w-px bg-slate-300 mx-2" aria-hidden="true" />
+              
+              {/* Full pages - badge-like styling */}
+              <div className="flex gap-x-4">
+                <NavLink 
+                  href="/blog" 
+                  className="font-semibold text-blue-700 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:border-blue-400 px-4 py-2 rounded-lg transition-all shadow-sm hover:shadow-md"
+                >
+                  📝 Blog
+                </NavLink>
+                <NavLink 
+                  href="/research" 
+                  className="font-semibold text-green-700 border border-green-300 bg-green-50 hover:bg-green-100 hover:border-green-400 px-4 py-2 rounded-lg transition-all shadow-sm hover:shadow-md"
+                >
+                  🔬 Research
+                </NavLink>
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-x-6 md:gap-x-10">

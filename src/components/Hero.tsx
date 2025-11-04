@@ -6,7 +6,7 @@ import { SectionShell } from './section-shell'
 
 export function Hero() {
   return (
-    <SectionShell className="pt-4 pb-12 sm:pt-8 sm:pb-20">
+    <SectionShell className="pt-4 pb-12 sm:pt-8 sm:pb-20 pt-16 md:pt-20">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-24">
         <div className="flex flex-col gap-4">
           <h1 className="mx-auto w-full font-display text-5xl font-medium tracking-tight text-secondary sm:max-w-xl sm:text-5xl lg:max-w-4xl">
