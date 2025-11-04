@@ -114,7 +114,7 @@ export function Header() {
           <div className="flex items-center gap-x-6 md:gap-x-10">
             <Button className="px-6 py-3 text-lg">
               <Link
-                href={'"/#contacts"'}
+                href={'/#contacts'}
                 target="_blank"
                 rel="noopener noreferrer"
               >
