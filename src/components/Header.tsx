@@ -87,14 +87,14 @@ function MobileNavigation() {
         <PopoverButton
           as={Link}
           href="/blog"
-          className="block w-full p-3 text-lg md:text-xl font-semibold text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+          className="block w-full p-3 text-lg md:text-xl font-semibold rounded-lg transition-colors mt-2"
         >
           Blog
         </PopoverButton>
         <PopoverButton
           as={Link}
           href="/research"
-          className="block w-full p-3 text-lg md:text-xl font-semibold text-green-600 bg-green-50 rounded-lg hover:bg-green-100 transition-colors mt-2"
+          className="block w-full p-3 text-lg md:text-xl font-semibold rounded-lg transition-colors mt-2"
         >
           Research
         </PopoverButton>
