@@ -34,7 +34,7 @@ export default function Contacts() {
   }
 
   return (
-    <SectionShell className="relative isolate" id="contacts">
+    <SectionShell className="relative isolate scroll-mt-32 md:scroll-mt-36 lg:scroll-mt-40" id="contacts">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pt-6 pb-20 lg:static lg:px-8 lg:py-12">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">

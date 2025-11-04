@@ -52,7 +52,7 @@ function QuoteIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Testimonials() {
   return (
-    <SectionShell id="testimonials">
+    <SectionShell id="testimonials" className="scroll-mt-32 md:scroll-mt-36 lg:scroll-mt-40">
       <SectionHeader>
         <SectionTitle>Testimonials</SectionTitle>
         <SectionHeading>Real Experiences with iTELL</SectionHeading>
