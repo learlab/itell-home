@@ -2,13 +2,16 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import clsx from 'clsx'
 
 export function NavLink({
   href,
   children,
+  className,
 }: {
   href: string
   children: React.ReactNode
+  className?: string
 }) {
   const pathname = usePathname()
 
@@ -62,7 +65,10 @@ export function NavLink({
     <Link
       href={href}
       onClick={handleClick}
-      className="inline-block rounded-lg px-2 py-1 text-base/7 font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900 lg:text-lg"
+      className={clsx(
+        "inline-block rounded-lg px-2 py-1 text-base/7 font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900 lg:text-lg",
+        className // This allows custom classes to be merged
+      )}
     >
       {children}
     </Link>
