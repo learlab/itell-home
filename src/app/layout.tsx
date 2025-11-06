@@ -1,10 +1,12 @@
 import { type Metadata } from 'next'
 import { Roboto_Slab, Roboto } from 'next/font/google'
 import clsx from 'clsx'
-import { GoogleAnalytics } from '@next/third-parties/google' // Your existing import
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import '@/styles/tailwind.css'
 import { Toaster } from 'sonner'
+import { Header } from '@/components/Header' // Import your Header
+import { Footer } from '@/components/Footer' // Import your Footer if you have one
 
 export const metadata: Metadata = {
   title: {
@@ -43,8 +45,15 @@ export default function RootLayout({
         slab.variable,
       )}
     >
-      <Toaster />
-      <body className="flex h-full flex-col">{children}</body>
+      <body className="flex h-full flex-col">
+        <Header />
+        <main className="flex-1 pt-32 md:pt-40"> {/* Added pt-32 md:pt-40 for header spacing */}
+          {children}
+        </main>
+        {/* Add Footer here if you have one */}
+        {/* <Footer /> */}
+        <Toaster />
+      </body>
       {/* Add the GoogleAnalytics component here */}
       <GoogleAnalytics gaId="G-CM4LYDKT2M" />
     </html>

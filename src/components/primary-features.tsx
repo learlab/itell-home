@@ -34,7 +34,7 @@ const features = [
 
 export default function PrimaryFeatures() {
   return (
-    <SectionShell id="features">
+    <SectionShell id="features" className="scroll-mt-32 md:scroll-mt-36 lg:scroll-mt-40">
       <SectionHeader>
         <SectionTitle>Build intelligent texts faster</SectionTitle>
         <SectionHeading>What iTELL Offers</SectionHeading>
@@ -81,7 +81,7 @@ export default function PrimaryFeatures() {
       </SectionHeading>
 
       <div className="mt-4 flex justify-center">
-        <DemoButton text="Try a Demo Now" />
+        <DemoButton text="Try iTELL Now" />
       </div>
     </SectionShell>
   )

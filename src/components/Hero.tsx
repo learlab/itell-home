@@ -6,7 +6,7 @@ import { SectionShell } from './section-shell'
 
 export function Hero() {
   return (
-    <SectionShell className="pt-4 pb-12 sm:pt-8 sm:pb-20">
+    <SectionShell className="pt-4 pb-12 sm:pt-8 sm:pb-20 pt-16 md:pt-20">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-24">
         <div className="flex flex-col gap-4">
           <h1 className="mx-auto w-full font-display text-5xl font-medium tracking-tight text-secondary sm:max-w-xl sm:text-5xl lg:max-w-4xl">
@@ -28,9 +28,8 @@ export function Hero() {
           </h3>*/}
           <YouTubeEmbed
             videoid="nQjNPJmorNE"
-            width={640}
-            height={360} // Let the padding-bottom trick handle height
-            style="width:100%;aspect-ratio:16/9;" // This creates a 16:9 ratio (9/16 = 0.5625)
+            style="width:100%;aspect-ratio:16/9;"
+            params="playsinline=1"
           />
         </div>
       </div>
@@ -70,8 +69,8 @@ export function Hero() {
           <Image
             src={'/images/TCSG-logo.png'}
             alt="Technical College System of Georgia"
-            width={150}
-            height={150}
+            width={200}
+            height={200}
           />
         </div>
       </div>

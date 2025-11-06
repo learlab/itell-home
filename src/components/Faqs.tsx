@@ -45,7 +45,7 @@ const faqs = [
 
 export function Faqs() {
   return (
-    <SectionShell id="faq">
+    <SectionShell id="faq" className = "scroll-mt-32 md:scroll-mt-36 lg:scroll-mt-40">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5">
           <SectionHeading>FAQs</SectionHeading>
