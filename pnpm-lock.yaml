@@ -11,6 +11,9 @@ patchedDependencies:
   hast-util-from-html-isomorphic:
     hash: ce1091431b193c97fcd7d8d6350edbb380785668da30e3e6e938fea0a61c9eb7
     path: patches/hast-util-from-html-isomorphic.patch
+  htmr:
+    hash: 2ff474ed1b15e37bf291197d102d20c01313c88825d5a1f7dcdc15dabdb435ac
+    path: patches/htmr.patch
 
 importers:
 
@@ -69,7 +72,7 @@ importers:
         version: 9.0.1
       htmr:
         specifier: ^1.0.2
-        version: 1.0.2(react@19.2.0)
+        version: 1.0.2(patch_hash=2ff474ed1b15e37bf291197d102d20c01313c88825d5a1f7dcdc15dabdb435ac)(react@19.2.0)
       lucide-react:
         specifier: ^0.540.0
         version: 0.540.0(react@19.2.0)
@@ -6915,7 +6918,7 @@ snapshots:
       domutils: 3.2.2
       entities: 4.5.0
 
-  htmr@1.0.2(react@19.2.0):
+  htmr@1.0.2(patch_hash=2ff474ed1b15e37bf291197d102d20c01313c88825d5a1f7dcdc15dabdb435ac)(react@19.2.0):
     dependencies:
       html-entities: 2.6.0
       htmlparser2: 6.1.0

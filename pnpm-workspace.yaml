@@ -1,3 +1,4 @@
 patchedDependencies:
   decode-named-character-reference: patches/decode-named-character-reference.patch
   hast-util-from-html-isomorphic: patches/hast-util-from-html-isomorphic.patch
+  htmr: patches/htmr.patch

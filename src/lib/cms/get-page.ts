@@ -105,10 +105,11 @@ export type PageData = {
 }
 
 const pageFilter = qs.stringify({
-  fields: ['Title', 'Slug'],
+  fields: ['Title', 'Slug', 'ClozeTest', 'EndOfPageActivity'],
   populate: {
     Content: true,
     Volume: true,
+    Quiz: true,
   },
 })
 
@@ -137,6 +138,7 @@ const pageDataSchema = z.object({
 export const getPage = cache(async (id: string) => {
   const response = await fetch(`${baseURL}/pages/${id}?${pageFilter}`)
   if (!response.ok) {
+    console.log('response not ok', await response.text())
     return null
   }
   const json = await response.json()
