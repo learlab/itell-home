@@ -7,6 +7,7 @@ import '@/styles/tailwind.css'
 import { Toaster } from 'sonner'
 import { Header } from '@/components/Header' // Import your Header
 import { Footer } from '@/components/Footer' // Import your Footer if you have one
+import { QueryProvider } from '@/components/providers/query-provider'
 
 export const metadata: Metadata = {
   title: {
@@ -46,13 +47,15 @@ export default function RootLayout({
       )}
     >
       <body className="flex h-full flex-col">
-        <Header />
-        <main className="flex-1 pt-32 md:pt-40"> {/* Added pt-32 md:pt-40 for header spacing */}
-          {children}
-        </main>
-        {/* Add Footer here if you have one */}
-        {/* <Footer /> */}
-        <Toaster />
+        <QueryProvider>
+          <Header />
+          <main className="flex-1 pt-32 md:pt-40"> {/* Added pt-32 md:pt-40 for header spacing */}
+            {children}
+          </main>
+          {/* Add Footer here if you have one */}
+          {/* <Footer /> */}
+          <Toaster />
+        </QueryProvider>
       </body>
       {/* Add the GoogleAnalytics component here */}
       <GoogleAnalytics gaId="G-CM4LYDKT2M" />

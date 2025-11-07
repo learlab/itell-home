@@ -147,7 +147,6 @@ export const getPage = cache(async (id: string) => {
   }
 
   const page = parsed.data.data
-  console.log(page.Content[1])
   return {
     id,
     title: page.Title,
