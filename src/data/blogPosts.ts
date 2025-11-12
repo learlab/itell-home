@@ -1,28 +1,61 @@
 export const blogPosts = [
   {
     id: 1,
-    title: 'The Future of AI in Education',
-    excerpt: 'Exploring how artificial intelligence is transforming learning experiences and making education more accessible.',
+    title: "A Soldier's Story: Why We're Reimagining Training to Save Lives",
+    excerpt: 'Inspired by a preventable tragedy, iTELL uses AI to make vital training impossible to ignore, turning static manuals into engaging experiences that protect people and prevent accidents.',
     content: `
-      <p>Artificial intelligence is revolutionizing the education sector in unprecedented ways. 
-      From personalized learning paths to automated grading systems, AI is transforming how students learn and educators teach.</p>
-      <br>
-      <p>One of the most significant impacts of AI in education is the ability to create personalized learning experiences. 
-      AI algorithms can analyze student performance data to identify knowledge gaps and recommend tailored content that 
-      addresses specific learning needs.</p>
-      <br>
-      <p>Furthermore, AI-powered tools are making education more accessible than ever before. 
-      Language translation, speech-to-text capabilities, and adaptive interfaces are breaking down barriers 
-      for students with diverse needs and backgrounds.</p>
-      <br>
-      <p>As we look to the future, the integration of AI in educational settings will continue to evolve, 
-      offering new opportunities for customized learning journeys and improved educational outcomes.</p>
+              <b>A Soldier's Story: Why We're Reimagining Training to Save Lives</b><br>
+              <i>By Wesley Morris, CEO of iTELL</i><br>
+              Fifteen years ago, a conversation around a bonfire changed my life.<br>
+              My cousin, a young Army lieutenant on leave from Iraq, was wrestling with a tragedy. 
+              He was an intelligence officer whose job was to plan safe convoy routes through Baghdad. 
+              He’d identified a particularly dangerous stretch of broken terrain and issued a clear warning: "drive carefully."<br>
+              This critical warning was buried in a dense, text-heavy PowerPoint slide deck.<br>
+              The young soldiers who received it, being 18-20 years old, likely skimmed it or ignored it completely. 
+              Tragically, one soldier, on a reckless joyride, flipped his vehicle and died.<br>
+              A life was lost, not due to a failure of planning, but a failure of communication. 
+              The training materials were obsolete, unable to engage or hold attention. 
+              My cousin was exonerated, but the guilt and responsibility for that lost life haunts him to this day. 
+              He carries that soldier's name with him, every single day, as a reminder of his responsibility to the people 
+              under his command.<br>
+              <b>That Story Became Our Mission</b><br>
+              That tragedy never left me. 
+              As I built my career in education, I kept asking: <i>How can we communicate vital procedures in a way that actually works?</i> 
+              How do we not just present information, but ensure it is understood and remembered?<br>
+              We need a way to make learning <b>engaging, interactive, and accountable</b>. 
+              A tool that doesn't just inform, but protects. It could get people ready for work faster, 
+              keep them safer, and prevent the kind of accidents that, in the US alone, cost 18 million workdays every year.<br>
+              This mission drove me to pursue my PhD, and it converged perfectly with the AI revolution. 
+              With the advent of transformative AI models, the impossible suddenly seemed within reach.<br>
+              That convergence is why we built iTELL.<br>
+              <b>How iTELL Transforms Training</b><br>
+              iTELL uses AI to solve the very problem my cousin faced. 
+              We automatically convert those static, easy-to-skip documents—PowerPoints, PDFs, manuals—into dynamic, 
+              interactive learning experiences.<br>
+              Think of it like this: we turn a wall of text into a conversation.<br>
+              <ul>
+                <li><b>It’s Interactive:</b> Our AI generates built-in activities like short quizzes and fill-in-the-blank exercises to reinforce understanding as you learn.</li>
+                <li><b>It’s Accountable:</b> We measure a learner's knowledge and engagement in real-time, giving instructors actionable data to see who is truly prepared.</li>
+                <li><b>It’s Adaptive:</b> The system can personalize the material to fit each learner's pace and needs.</li>
+              <b>This Isn't Just a Dream—It's Here</b>
+              </ul>
+              We've already moved from a powerful story to a proven solution. 
+              iTELL's MVP has been deployed in 10 instructional settings across 4 trade schools and universities. 
+              The results are clear: improved learning and higher user satisfaction. 
+              Our findings aren't just internal; they're validated in eight peer-reviewed publications.<br>
+              Now, with the support of the NSF I-Corps program, we're bringing this transformation to industry.<br>
+              <b>Join Us on This Mission</b><br>
+              When I think about iTELL's future, I still go back to that bonfire. 
+              I remember the stakes. This isn't just about efficiency or cost savings for companies—though we will deliver that. 
+              It's about preventing the kind of tragedy that my cousin, and that soldier's family, lived through.<br>
+              We are building tools that don't just train better; they protect people.<br>
+              We are proud to be making this dream a reality, and we invite you to be part of it. Request a demo for your company today.<br>
     `,
-    date: '2025-11-03',
-    slug: 'future-of-ai-in-education',
+    date: '2025-11-12',
+    slug: 'soldiers-story',
     image: '/blog/itell-logo.png',
-    category: 'Technology',
-    readTime: '5 min read',
+    category: 'Training',
+    readTime: '15 min read',
   },
   {
     id: 2,
