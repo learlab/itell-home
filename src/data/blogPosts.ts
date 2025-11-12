@@ -4,7 +4,7 @@ export const blogPosts = [
     title: "Why We're Reimagining Training to Save Lives",
     excerpt: 'Inspired by a preventable tragedy, iTELL uses AI to make vital training impossible to ignore, turning static manuals into engaging experiences that protect people and prevent accidents.',
     content: `
-      <b>A Soldier's Story: Why We're Reimagining Training to Save Lives</b><br>
+      <b>Why We're Reimagining Training to Save Lives</b><br>
       <i>By Wesley Morris, Entrepreneurial Lead of iTELL</i><br><br>
       Fifteen years ago, a conversation around a bonfire changed my life.<br><br>
       My cousin, a young Army lieutenant on leave from Iraq, was wrestling with a tragedy. 
