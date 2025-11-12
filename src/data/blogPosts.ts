@@ -5,7 +5,7 @@ export const blogPosts = [
     excerpt: 'Inspired by a preventable tragedy, iTELL uses AI to make vital training impossible to ignore, turning static manuals into engaging experiences that protect people and prevent accidents.',
     content: `
       <b>A Soldier's Story: Why We're Reimagining Training to Save Lives</b><br>
-      <i>By Wesley Morris, CEO of iTELL</i><br><br>
+      <i>By Wesley Morris, Entrepreneurial Lead of iTELL</i><br><br>
       Fifteen years ago, a conversation around a bonfire changed my life.<br><br>
       My cousin, a young Army lieutenant on leave from Iraq, was wrestling with a tragedy. 
       He was an intelligence officer whose job was to plan safe convoy routes through Baghdad. 
@@ -18,7 +18,7 @@ export const blogPosts = [
       My cousin was exonerated, but the guilt and responsibility for that lost life haunts him to this day. 
       He carries that soldier's name with him, every single day, as a reminder of his responsibility to the people 
       under his command.<br><br>
-      <b>That Story Became Our Mission</b><br><br>
+      <b>Building the Mission of iTELL</b><br><br>
       That tragedy never left me. 
       As I built my career in education, I kept asking: <i>How can we communicate vital procedures in a way that actually works?</i> 
       How do we not just present information, but ensure it is understood and remembered?<br><br>
@@ -53,7 +53,7 @@ export const blogPosts = [
     `,
     date: '2025-11-12',
     slug: 'soldiers-story',
-    image: '/blog/itell-logo.png',
+    image: '/blog/campfire-burning-in-front-of-mountains.jpg',
     category: 'Training',
     readTime: '15 min read',
   },
