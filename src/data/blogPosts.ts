@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     id: 1,
-    title: "A Soldier's Story: Why We're Reimagining Training to Save Lives",
+    title: "Why We're Reimagining Training to Save Lives",
     excerpt: 'Inspired by a preventable tragedy, iTELL uses AI to make vital training impossible to ignore, turning static manuals into engaging experiences that protect people and prevent accidents.',
     content: `
       <b>A Soldier's Story: Why We're Reimagining Training to Save Lives</b><br>
@@ -52,7 +52,7 @@ export const blogPosts = [
       We are proud to be making this dream a reality, and we invite you to be part of it. Request a demo for your company today.<br>
     `,
     date: '2025-11-12',
-    slug: 'soldiers-story',
+    slug: 'itell-mission',
     image: '/blog/campfire-burning-in-front-of-mountains.jpg',
     category: 'Training',
     readTime: '15 min read',
