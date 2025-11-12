@@ -49,7 +49,7 @@ export const blogPosts = [
       I remember the stakes. This isn't just about efficiency or cost savings for companies—though we will deliver that. 
       It's about preventing the kind of tragedy that my cousin, and that soldier's family, lived through.<br><br>
       We are building tools that don't just train better; they protect people.<br><br>
-      We are proud to be making this dream a reality, and we invite you to be part of it. Request a demo for your company today.<br>
+      We are proud to be making this dream a reality, and we invite you to be part of it. <a href="https://www.itell.ai/#contacts">Request a demo for your company today</a>.<br>
     `,
     date: '2025-11-12',
     slug: 'itell-mission',
