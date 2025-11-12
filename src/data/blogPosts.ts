@@ -32,11 +32,11 @@ export const blogPosts = [
       iTELL uses AI to solve the very problem my cousin faced. 
       We automatically convert those static, easy-to-skip documents—PowerPoints, PDFs, manuals—into dynamic, 
       interactive learning experiences.<br><br>
-      Think of it like this: we turn a wall of text into a conversation.<br><br>
+      Think of it like this: we turn a wall of text into a conversation.<br>
       <ul>
           <li><b>It's Interactive:</b> Our AI generates built-in activities like short quizzes and fill-in-the-blank exercises to reinforce understanding as you learn.</li>
           <li><b>It's Accountable:</b> We measure a learner's knowledge and engagement in real-time, giving instructors actionable data to see who is truly prepared.</li>
-          <li><b>It's Adaptive:</b> The system can personalize the material to fit each learner's pace and needs.</li>
+          <li><b>It's Plug-and-Play:</b> iTELL can integrate with the learning management system you already have, or using single-sign-on from Google or Outlook.</li>
       </ul>
       <b>This Isn't Just a Dream—It's Here</b><br><br>
       We've already moved from a powerful story to a proven solution. 
