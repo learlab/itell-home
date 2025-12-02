@@ -59,23 +59,56 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: 'Best Practices for Employee Training',
-    excerpt: 'Learn how to create effective training programs that stick and drive real business results.',
+    title: 'From Static Text to Living Stories: How Reading Learned to Talk',
+    excerpt: 'A broken television led to a lifelong companionship with books and inspired the creation of iTELL, a platform designed to help all readers make texts come alive.',
     content: `
-      <p>Effective employee training is crucial for organizational success. In today's fast-paced 
-      business environment, companies need training programs that are not only informative but 
-      also engaging and retention-focused.</p>
-      <br>
-      <p>One key strategy is microlearning - breaking down complex information into small, 
-      digestible chunks that employees can easily absorb and apply to their daily work.</p>
-      <br>
-      <p>Another important aspect is incorporating interactive elements that keep learners 
-      engaged and motivated throughout the training process.</p>
+    When I was three, the family television broke, and my parents decided not to replace it. 
+    After that, all media came through the radio or through print. 
+    Luckily, there were a lot of books in my house, and, at some point, I remember looking at a page and words suddenly appearing. 
+    There were just a few at first, but then they started to multiply quickly, and my life was suddenly consumed by reading. 
+    <br><br>
+    This had a few positive outcomes. 
+    First, while far from a star at school, I excelled at reading, 
+    so much so that teachers questioned my parents about self-reports for the number of books I had read over the summer. 
+    When it came to reading, I was a star. 
+    Second, I found a connection with my father, spending innumerable number of nights at the city library with him. 
+    Last, as the youngest child (by a long stretch) and as a child whose parents firmly believed in the law of grounding, 
+    I spent a lot of time alone. It was at this time that books not only became a source of distraction and entertainment 
+    but also companionship because the books started talking to me. 
+    The main characters would come alive in my head and conversations and plots well beyond the printed word ensued.
+    <br><br>
+    Later, when studying for my Ph.D. and taking a course on reading theory, 
+    I learned that this was natural and, was in a fact, a very good comprehension strategy. 
+    Good readers do not treat texts as static entities devoid of character and emotion. 
+    Instead, good readers interact with the texts they read. 
+    This might be as simple as predicting what will happen next in a text, 
+    elaborating on a plot, argument, or idea, or summarizing a text as it is read. 
+    The best reading strategies, though, revolve around inferencing and involve readers making logical inferences 
+    given within the text, between segments of texts, or between the text and their background knowledge. 
+    Creating such inferences is known to improve text comprehension because readers are actively generating a mental 
+    representation of a text to include the where, when, what, and how events unfold and who is involved.
+    <br><br>
+    Helping readers generate inferences is one of the main goals of iTELL. 
+    iTELL does this by asking short questions that often require readers to make inferences and by assessing readers’ 
+    summarization of text, which often leads to natural inferences. 
+    iTELL also helps readers generate inferences through a dialogic chatbot called 
+    Strategic Thinking And Interactive Reading Support (STAIRS). 
+    STAIRS guides the reader through a self-explanation of a text chunk through conversational questions 
+    designed to help the reader interact with the text. The STAIRS chatbot asks users to reread a section of text 
+    and elaborate on that text, predict what will happen next in that text, 
+    or make inferences or logical connections between segments of that text and/or a reader’s background knowledge. 
+    <br><br>
+    This is all done implicitly in iTELL because strong reading strategies occur naturally. 
+    Additionally, we want iTELL users to focus on the reading demands of the text and not strategy development. 
+    However, with experience and practice, strategies like inference generation can develop intuitively and reading skills 
+    can develop naturally. Our hope is that iTELL helps texts become alive for all readers, 
+    leading to a more engaging and rich learning experience. We know that texts can be companions, 
+    and iTELL was developed to foster that relationship.  
     `,
-    date: '2025-11-03',
-    slug: 'best-practices-employee-training',
-    image: '/blog/employee-training.webp',
-    category: 'Training',
-    readTime: '4 min read',
+    date: '2025-12-02',
+    slug: 'static-text-living-stories',
+    image: '/blog/broken_tv.jpg',
+    category: 'Theories of Reading',
+    readTime: '18 min read',
   },
 ]
