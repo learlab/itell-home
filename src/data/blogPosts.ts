@@ -5,7 +5,7 @@ export const blogPosts = [
     excerpt: 'Inspired by a preventable tragedy, iTELL uses AI to make vital training impossible to ignore, turning static manuals into engaging experiences that protect people and prevent accidents.',
     content: `
       <b>Learning Saves Lives: Why we are reimagining workforce training</b><br>
-      <i>By Wesley Morris, Entrepreneurial Lead of iTELL</i><br><br>
+      <i>By Wesley Morris, iTELL CEO</i><br><br>
       Fifteen years ago, a conversation around a bonfire changed my life.<br><br>
       My cousin, a young Army lieutenant on leave from Iraq, was wrestling with a tragedy. 
       He was an intelligence officer whose job was to plan safe convoy routes through Baghdad. 
@@ -62,6 +62,8 @@ export const blogPosts = [
     title: 'From Static Text to Living Stories: How Reading Learned to Talk',
     excerpt: 'A broken television led to a lifelong companionship with books and inspired the creation of iTELL, a platform designed to help all readers make texts come alive.',
     content: `
+    <b>From Static Text to Living Stories: How Reading Learned to Talk</b><br>
+    <i>By Scott Crossley, iTELL Chief Innovation Officer</i><br><br>
     When I was three, the family television broke, and my parents decided not to replace it. 
     After that, all media came through the radio or through print. 
     Luckily, there were a lot of books in my house, and, at some point, I remember looking at a page and words suddenly appearing. 
