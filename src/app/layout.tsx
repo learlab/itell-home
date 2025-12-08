@@ -50,7 +50,11 @@ export default function RootLayout({
     >
       <body className="flex h-full flex-col">
         {/* Cookie Consent Banner */}
-        <TermlyCMP websiteUUID={WEBSITE_UUID} />
+        <TermlyCMP 
+          websiteUUID={WEBSITE_UUID}
+          autoBlock={true}
+          masterConsentsOrigin="https://app.termly.io"
+        />
         
         <QueryProvider>
           <Header />
