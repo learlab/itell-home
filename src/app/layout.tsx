@@ -8,6 +8,7 @@ import { Toaster } from 'sonner'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer' // Import your Footer if you have one
 import { QueryProvider } from '@/components/providers/query-provider'
+import { Suspense } from 'react'
 
 const WEBSITE_UUID = 'c97ff573-1139-4e61-aa4c-11639c6818c5'
 
@@ -50,11 +51,13 @@ export default function RootLayout({
     >
       <body className="flex h-full flex-col">
         {/* Cookie Consent Banner */}
-        <TermlyCMP 
-          websiteUUID={WEBSITE_UUID}
-          autoBlock={true}
-          masterConsentsOrigin="https://app.termly.io"
-        />
+        <Suspense fallback={null}>
+          <TermlyCMP 
+            websiteUUID={WEBSITE_UUID}
+            autoBlock={true}
+            masterConsentsOrigin="https://app.termly.io"
+          />
+        </Suspense>
         
         <QueryProvider>
           <Header />
