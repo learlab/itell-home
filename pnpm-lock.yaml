@@ -4,17 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  decode-named-character-reference:
-    hash: 8f0f9d2995fae88635d994b24ec289343664da7425755cd91da7ccfc50e74f7d
-    path: patches/decode-named-character-reference.patch
-  hast-util-from-html-isomorphic:
-    hash: ce1091431b193c97fcd7d8d6350edbb380785668da30e3e6e938fea0a61c9eb7
-    path: patches/hast-util-from-html-isomorphic.patch
-  htmr:
-    hash: 2ff474ed1b15e37bf291197d102d20c01313c88825d5a1f7dcdc15dabdb435ac
-    path: patches/htmr.patch
-
 importers:
 
   .:
@@ -66,13 +55,13 @@ importers:
         version: 1.0.0
       hast-util-from-html-isomorphic:
         specifier: ^2.0.0
-        version: 2.0.0(patch_hash=ce1091431b193c97fcd7d8d6350edbb380785668da30e3e6e938fea0a61c9eb7)
+        version: 2.0.0
       hastscript:
         specifier: ^9.0.1
         version: 9.0.1
       htmr:
         specifier: ^1.0.2
-        version: 1.0.2(patch_hash=2ff474ed1b15e37bf291197d102d20c01313c88825d5a1f7dcdc15dabdb435ac)(react@19.2.0)
+        version: 1.0.2(react@19.2.0)
       lucide-react:
         specifier: ^0.540.0
         version: 0.540.0(react@19.2.0)
@@ -5932,7 +5921,7 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  decode-named-character-reference@1.2.0(patch_hash=8f0f9d2995fae88635d994b24ec289343664da7425755cd91da7ccfc50e74f7d):
+  decode-named-character-reference@1.2.0:
     dependencies:
       character-entities: 2.0.2
 
@@ -6771,7 +6760,7 @@ snapshots:
       hastscript: 9.0.1
       web-namespaces: 2.0.1
 
-  hast-util-from-html-isomorphic@2.0.0(patch_hash=ce1091431b193c97fcd7d8d6350edbb380785668da30e3e6e938fea0a61c9eb7):
+  hast-util-from-html-isomorphic@2.0.0:
     dependencies:
       '@types/hast': 3.0.4
       hast-util-from-dom: 5.0.1
@@ -6918,7 +6907,7 @@ snapshots:
       domutils: 3.2.2
       entities: 4.5.0
 
-  htmr@1.0.2(patch_hash=2ff474ed1b15e37bf291197d102d20c01313c88825d5a1f7dcdc15dabdb435ac)(react@19.2.0):
+  htmr@1.0.2(react@19.2.0):
     dependencies:
       html-entities: 2.6.0
       htmlparser2: 6.1.0
@@ -7279,7 +7268,7 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
-      decode-named-character-reference: 1.2.0(patch_hash=8f0f9d2995fae88635d994b24ec289343664da7425755cd91da7ccfc50e74f7d)
+      decode-named-character-reference: 1.2.0
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
       micromark: 4.0.2
@@ -7406,7 +7395,7 @@ snapshots:
 
   micromark-core-commonmark@2.0.3:
     dependencies:
-      decode-named-character-reference: 1.2.0(patch_hash=8f0f9d2995fae88635d994b24ec289343664da7425755cd91da7ccfc50e74f7d)
+      decode-named-character-reference: 1.2.0
       devlop: 1.1.0
       micromark-factory-destination: 2.0.1
       micromark-factory-label: 2.0.1
@@ -7549,7 +7538,7 @@ snapshots:
 
   micromark-util-decode-string@2.0.1:
     dependencies:
-      decode-named-character-reference: 1.2.0(patch_hash=8f0f9d2995fae88635d994b24ec289343664da7425755cd91da7ccfc50e74f7d)
+      decode-named-character-reference: 1.2.0
       micromark-util-character: 2.1.1
       micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-symbol: 2.0.1
@@ -7587,7 +7576,7 @@ snapshots:
     dependencies:
       '@types/debug': 4.1.12
       debug: 4.4.1
-      decode-named-character-reference: 1.2.0(patch_hash=8f0f9d2995fae88635d994b24ec289343664da7425755cd91da7ccfc50e74f7d)
+      decode-named-character-reference: 1.2.0
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.3
       micromark-factory-space: 2.0.1
@@ -8055,7 +8044,7 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
       '@types/katex': 0.16.7
-      hast-util-from-html-isomorphic: 2.0.0(patch_hash=ce1091431b193c97fcd7d8d6350edbb380785668da30e3e6e938fea0a61c9eb7)
+      hast-util-from-html-isomorphic: 2.0.0
       hast-util-to-text: 4.0.2
       katex: 0.16.25
       unist-util-visit-parents: 6.0.2
