@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: 'iTELL',
   },
   description:
-    'iTELL provides a framework for building and deploymeng AI-powered, personalized texts for all businesses. ',
+    'iTELL provides a framework for building and deploying AI-powered, personalized texts for all businesses. ',
 }
 
 const roboto = Roboto({
