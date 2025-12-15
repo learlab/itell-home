@@ -1,13 +1,15 @@
 'use server'
 
-import { db } from '@/db'
+// import { db } from '@/db'
 import { contacts } from '@/db/schema'
 import { InferInsertModel } from 'drizzle-orm'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function createContactSubmission(values: InferInsertModel<typeof contacts>) {
+export async function createContactSubmission(
+  values: InferInsertModel<typeof contacts>,
+) {
   try {
     // Send email to your team
     await resend.emails.send({
@@ -38,9 +40,9 @@ export async function createContactSubmission(values: InferInsertModel<typeof co
     //   `,
     // })
 
-    // Insert into database and return success
-    const result = await db.insert(contacts).values(values)
-    return { success: true, result }
+    // // Insert into database and return success
+    // const result = await db.insert(contacts).values(values)
+    return { success: true }
   } catch (error) {
     console.error('Error sending email:', error)
     return { success: false, error: 'Failed to send message' }
