@@ -12,9 +12,11 @@ export function Footer() {
           <Logo className="size-16" />
           <nav className="text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#">Home</NavLink>
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#contacts">Contacts</NavLink>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/#features">Features</NavLink>
+              <NavLink href="/#contacts">Contacts</NavLink>
+              <NavLink href="/privacy-policy">Privacy Policy</NavLink>
+              <NavLink href="/cookies">Cookies Policy</NavLink>
             </div>
           </nav>
         </div>

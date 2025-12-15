@@ -23,7 +23,7 @@ interface BlogCarouselProps {
 
 export default function BlogCarousel({ posts }: BlogCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    align: 'start',
+    align: 'center', // Changed from 'start' to 'center' for better centering
     containScroll: 'trimSnaps',
     dragFree: false,
     loop: false,
@@ -67,7 +67,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
   }
 
   return (
-    <div className="relative">
+    <div className="relative mx-auto"> {/* Added mx-auto for centering */}
       {/* Mobile Navigation Buttons - Top Right */}
       <div className="flex justify-end gap-2 mb-6 lg:hidden">
         <button
@@ -108,19 +108,19 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
           </button>
         </div>
 
-        {/* Embla Carousel Container */}
+        {/* Embla Carousel Container - KEY FIXES HERE */}
         <div className="overflow-hidden py-4 px-2 min-h-[400px] w-full max-w-6xl" ref={emblaRef}>
           <div className="flex touch-pan-y gap-6">
             {posts.map((post) => (
               <div
                 key={post.id}
-                className="flex-shrink-0 w-80 md:w-96 min-w-0 flex-[0_0_20rem] md:flex-[0_0_24rem]"
+                className="flex-shrink-0 w-80 md:w-96 min-w-0 flex-[0_0_20rem] md:flex-[0_0_24rem] flex justify-center" // Added flex justify-center
               >
-                <article className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden h-full border border-gray-100">
-                  {/* Image Section */}
-                  <div className="h-48 bg-gradient-to-br from-blue-50 to-slate-100 relative">
+                <article className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden h-full border border-gray-100 max-w-sm md:max-w-md">
+                  {/* Image Section - KEY FIX FOR IMAGE CENTERING */}
+                  <div className="h-48 bg-gradient-to-br from-blue-50 to-slate-100 relative overflow-hidden">
                     {imageErrors.has(post.id) ? (
-                      // Fallback UI
+                      // Fallback UI - Centered
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-slate-400 text-center">
                           <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,14 +130,18 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                         </div>
                       </div>
                     ) : (
-                      // Actual Image
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        className="object-contain"
-                        onError={() => handleImageError(post.id)}
-                      />
+                      // Actual Image - Changed to object-cover and added positioning
+                      <div className="relative w-full h-full flex items-center justify-center">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          className="object-cover" // Changed from object-contain
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          onError={() => handleImageError(post.id)}
+                          style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                        />
+                      </div>
                     )}
                   </div>
                   
